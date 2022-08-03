@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3BD4F203-CDC1-4199-A132-3F630FF966B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Autoclicker</RootNamespace>
+    <AssemblyName>Autoclicker</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>10</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Autoclicker.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\Framework64\v4.0.30319\Accessibility.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ControlzEx.3.0.2.4\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Dragablz, Version=0.0.3.203, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dragablz.0.0.3.203\lib\net45\Dragablz.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.1.6.5\lib\net47\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.3.2, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.2.0.3\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.2.1.2, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.4.2.1\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Console, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\Framework64\v4.0.30319\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\ControlzEx.3.0.2.4\lib\net462\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="clicker\Clicker.cs" />
+    <Compile Include="clicker\ClickerData.cs" />
+    <Compile Include="clicker\ClickerUtil.cs" />
+    <Compile Include="clicker\Constants.cs" />
+    <Compile Include="clicker\extra\BlockhitUtil.cs" />
+    <Compile Include="clicker\extra\BreakBlocksUtil.cs" />
+    <Compile Include="clicker\extra\JitterUtil.cs" />
+    <Compile Include="clicker\extra\RefillUtil.cs" />
+    <Compile Include="clicker\left clicker\LeftClicker.cs" />
+    <Compile Include="clicker\left clicker\LeftClickerPauseDelay.cs" />
+    <Compile Include="clicker\left clicker\LeftClickerUtil.cs" />
+    <Compile Include="clicker\left clicker\LeftClickerValues.cs" />
+    <Compile Include="clicker\ms\MillisecondsUtil.cs" />
+    <Compile Include="clicker\right clicker\RightClicker.cs" />
+    <Compile Include="clicker\right clicker\RightClickerUtil.cs" />
+    <Compile Include="clicker\right clicker\RightClickerValues.cs" />
+    <Compile Include="components\color\ColorConversion.cs" />
+    <Compile Include="components\color\ColorPicker.cs" />
+    <Compile Include="components\color\ColorPickerUtil.cs" />
+    <Compile Include="components\color\SetComponentsColor.cs" />
+    <Compile Include="components\events\color\RainbowColorEvents.cs" />
+    <Compile Include="components\events\ComponentsEvents.cs" />
+    <Compile Include="components\events\ComponentsEventsUtil.cs" />
+    <Compile Include="components\events\left clicker\LeftClickerEvents.cs" />
+    <Compile Include="components\events\left clicker\LeftClickerSoundEvents.cs" />
+    <Compile Include="components\events\right Clicker\RightClickerEvents.cs" />
+    <Compile Include="components\events\right Clicker\RightClickerSoundEvents.cs" />
+    <Compile Include="display\DisplayLeftClickerValues.cs" />
+    <Compile Include="display\DisplayRightClickerValues.cs" />
+    <Compile Include="display\DisplayValues.cs" />
+    <Compile Include="display\MinecraftUtil.cs" />
+    <Compile Include="hooks\KeyboardHook.cs" />
+    <Compile Include="hooks\KeyboardUtil.cs" />
+    <Compile Include="mouse control\MouseControl.cs" />
+    <Compile Include="mouse control\MouseControlUtil.cs" />
+    <Compile Include="mouse control\MoveMouseUtil.cs" />
+    <Compile Include="random generator\Random.cs" />
+    <Compile Include="sound\FadeOutSound.cs" />
+    <Compile Include="sound\ShuffleSounds.cs" />
+    <Compile Include="sound\SoundData.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="hooks\MouseHook.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="packages.config" />
+    <Resource Include="Resources\Entypo.ttf" />
+    <None Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\IconsNonShared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G502.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g3032.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GPro.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microsoft.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normal.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oldmouse.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g303.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deathadder.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_glorious_model1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_glorious_model1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glorious_model_final.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\godbridge_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gb_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\godbridge_sound2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\godbridge_sound_fn.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spacebar_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_godbridge_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\albypro_gb.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\albypro_gb2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\albypro_gb3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\albypro_gb4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\albypro_gb5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fifth_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fifth_silence.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_silence.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourth_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourth_silence.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octavo_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octavo_silencio.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_silence.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\septimo_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\septimo_silence.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sixth_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sixth_silence.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_silence.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_full_godbridge_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drag_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_godbridge_sound2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\godbridge_sound2_corrected.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\low_butterfly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_butterfly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_butterfly_final.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_godbridge_sound_second.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_godbridge_sound_third.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_butterfly_sound_second.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_butterfly_sound_third.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_butterfly_first.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_godbridge_sound_2variant.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_godbridge_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_godbridge_sound_3variant.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_drag_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_drag_click_2variant.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_drag_click_3variant.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_telly_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_telly_sound_2variant.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_telly_sound_3variant.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eight_telly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fifth_telly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_telly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourth_telly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_telly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seventh_telly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sixth_telly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_telly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fifth_godbridge.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_godbridge.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourth_godbridge.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_godbridge.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_godbridge.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eight_dragclick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fifth_dragclick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_dragclick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourth_dragclick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninth_dragclick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_dragclick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seventh_dragclick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sixth_dragclick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_dragclick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_breezily.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_breezily.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_breezily.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_moonwalk.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_moonwalk.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_moonwalk.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fifth_jitter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_jitter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourth_jitter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_jitter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sixth_jitter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_jitter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sixth_normal_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_normal_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fifth_normal_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_normal_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourth_normal_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_normal_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_left_normal_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_left_normal_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_left_normal_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourth_left_normal_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eigth_butterfly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fifth_butterfly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_butterfly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourth_butterfly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninth_butterfly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\second_butterfly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seventh_butterfly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sixth_butterfly.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\third_butterfly.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>
