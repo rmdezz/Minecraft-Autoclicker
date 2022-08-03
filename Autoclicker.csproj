@@ -121,46 +121,166 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="clicker\Clicker.cs" />
-    <Compile Include="clicker\ClickerData.cs" />
-    <Compile Include="clicker\ClickerUtil.cs" />
-    <Compile Include="clicker\Constants.cs" />
-    <Compile Include="clicker\extra\BlockhitUtil.cs" />
-    <Compile Include="clicker\extra\BreakBlocksUtil.cs" />
-    <Compile Include="clicker\extra\JitterUtil.cs" />
-    <Compile Include="clicker\extra\RefillUtil.cs" />
-    <Compile Include="clicker\left clicker\LeftClicker.cs" />
-    <Compile Include="clicker\left clicker\LeftClickerPauseDelay.cs" />
-    <Compile Include="clicker\left clicker\LeftClickerUtil.cs" />
-    <Compile Include="clicker\left clicker\LeftClickerValues.cs" />
-    <Compile Include="clicker\ms\MillisecondsUtil.cs" />
-    <Compile Include="clicker\right clicker\RightClicker.cs" />
-    <Compile Include="clicker\right clicker\RightClickerUtil.cs" />
-    <Compile Include="clicker\right clicker\RightClickerValues.cs" />
-    <Compile Include="components\color\ColorConversion.cs" />
-    <Compile Include="components\color\ColorPicker.cs" />
-    <Compile Include="components\color\ColorPickerUtil.cs" />
-    <Compile Include="components\color\SetComponentsColor.cs" />
-    <Compile Include="components\events\color\RainbowColorEvents.cs" />
-    <Compile Include="components\events\ComponentsEvents.cs" />
-    <Compile Include="components\events\ComponentsEventsUtil.cs" />
-    <Compile Include="components\events\left clicker\LeftClickerEvents.cs" />
-    <Compile Include="components\events\left clicker\LeftClickerSoundEvents.cs" />
-    <Compile Include="components\events\right Clicker\RightClickerEvents.cs" />
-    <Compile Include="components\events\right Clicker\RightClickerSoundEvents.cs" />
-    <Compile Include="display\DisplayLeftClickerValues.cs" />
-    <Compile Include="display\DisplayRightClickerValues.cs" />
-    <Compile Include="display\DisplayValues.cs" />
-    <Compile Include="display\MinecraftUtil.cs" />
-    <Compile Include="hooks\KeyboardHook.cs" />
-    <Compile Include="hooks\KeyboardUtil.cs" />
-    <Compile Include="mouse control\MouseControl.cs" />
-    <Compile Include="mouse control\MouseControlUtil.cs" />
-    <Compile Include="mouse control\MoveMouseUtil.cs" />
-    <Compile Include="random generator\Random.cs" />
-    <Compile Include="sound\FadeOutSound.cs" />
-    <Compile Include="sound\ShuffleSounds.cs" />
-    <Compile Include="sound\SoundData.cs" />
+    <Compile Include="src\clicker\Clicker.cs" />
+    <Compile Include="src\clicker\ClickerData.cs" />
+    <Compile Include="src\clicker\ClickerUtil.cs" />
+    <Compile Include="src\clicker\Constants.cs" />
+    <Compile Include="src\clicker\extra\BlockhitUtil.cs" />
+    <Compile Include="src\clicker\extra\BreakBlocksUtil.cs" />
+    <Compile Include="src\clicker\extra\JitterUtil.cs" />
+    <Compile Include="src\clicker\extra\RefillUtil.cs" />
+    <Compile Include="src\clicker\left clicker\LeftClicker.cs" />
+    <Compile Include="src\clicker\left clicker\LeftClickerPauseDelay.cs" />
+    <Compile Include="src\clicker\left clicker\LeftClickerUtil.cs" />
+    <Compile Include="src\clicker\left clicker\LeftClickerValues.cs" />
+    <Compile Include="src\clicker\ms\MillisecondsUtil.cs" />
+    <Compile Include="src\clicker\right clicker\RightClicker.cs" />
+    <Compile Include="src\clicker\right clicker\RightClickerUtil.cs" />
+    <Compile Include="src\clicker\right clicker\RightClickerValues.cs" />
+    <Compile Include="src\components\color\ColorConversion.cs" />
+    <Compile Include="src\components\color\ColorPicker.cs" />
+    <Compile Include="src\components\color\ColorPickerUtil.cs" />
+    <Compile Include="src\components\color\SetComponentsColor.cs" />
+    <Compile Include="src\components\events\color\RainbowColorEvents.cs" />
+    <Compile Include="src\components\events\ComponentsEvents.cs" />
+    <Compile Include="src\components\events\ComponentsEventsUtil.cs" />
+    <Compile Include="src\components\events\left clicker\LeftClickerEvents.cs" />
+    <Compile Include="src\components\events\left clicker\LeftClickerSoundEvents.cs" />
+    <Compile Include="src\components\events\right Clicker\RightClickerEvents.cs" />
+    <Compile Include="src\components\events\right Clicker\RightClickerSoundEvents.cs" />
+    <Compile Include="src\display\DisplayLeftClickerValues.cs" />
+    <Compile Include="src\display\DisplayRightClickerValues.cs" />
+    <Compile Include="src\display\DisplayValues.cs" />
+    <Compile Include="src\display\MinecraftUtil.cs" />
+    <Compile Include="src\hooks\KeyboardHook.cs" />
+    <Compile Include="src\hooks\KeyboardUtil.cs" />
+    <Compile Include="src\hooks\MouseHook.cs" />
+    <Compile Include="src\mouse control\MouseControl.cs" />
+    <Compile Include="src\mouse control\MouseControlUtil.cs" />
+    <Compile Include="src\mouse control\MoveMouseUtil.cs" />
+    <Compile Include="src\random generator\Random.cs" />
+    <Compile Include="src\sound\FadeOutSound.cs" />
+    <Compile Include="src\sound\ShuffleSounds.cs" />
+    <Compile Include="src\sound\SoundData.cs" />
+    <None Include="Resources\albypro_gb.wav" />
+    <None Include="Resources\albypro_gb2.wav" />
+    <None Include="Resources\albypro_gb3.wav" />
+    <None Include="Resources\albypro_gb4.wav" />
+    <None Include="Resources\albypro_gb5.wav" />
+    <None Include="Resources\deathadder.wav" />
+    <None Include="Resources\drag_click.wav" />
+    <None Include="Resources\eight_dragclick.wav" />
+    <None Include="Resources\eight_telly.wav" />
+    <None Include="Resources\eigth_butterfly.wav" />
+    <None Include="Resources\fifth_butterfly.wav" />
+    <None Include="Resources\fifth_click.wav" />
+    <None Include="Resources\fifth_dragclick.wav" />
+    <None Include="Resources\fifth_godbridge.wav" />
+    <None Include="Resources\fifth_jitter.wav" />
+    <None Include="Resources\fifth_normal_click.wav" />
+    <None Include="Resources\fifth_silence.wav" />
+    <None Include="Resources\fifth_telly.wav" />
+    <None Include="Resources\first_breezily.wav" />
+    <None Include="Resources\first_butterfly.wav" />
+    <None Include="Resources\first_click.wav" />
+    <None Include="Resources\first_dragclick.wav" />
+    <None Include="Resources\first_glorious_model1.wav" />
+    <None Include="Resources\first_godbridge.wav" />
+    <None Include="Resources\first_jitter.wav" />
+    <None Include="Resources\first_left_normal_click.wav" />
+    <None Include="Resources\first_moonwalk.wav" />
+    <None Include="Resources\first_normal_click.wav" />
+    <None Include="Resources\first_silence.wav" />
+    <None Include="Resources\first_telly.wav" />
+    <None Include="Resources\fourth_butterfly.wav" />
+    <None Include="Resources\fourth_click.wav" />
+    <None Include="Resources\fourth_dragclick.wav" />
+    <None Include="Resources\fourth_godbridge.wav" />
+    <None Include="Resources\fourth_jitter.wav" />
+    <None Include="Resources\fourth_left_normal_click.wav" />
+    <None Include="Resources\fourth_normal_click.wav" />
+    <None Include="Resources\fourth_silence.wav" />
+    <None Include="Resources\fourth_telly.wav" />
+    <None Include="Resources\full_butterfly.wav" />
+    <None Include="Resources\full_butterfly_final.wav" />
+    <None Include="Resources\full_butterfly_first.wav" />
+    <None Include="Resources\full_butterfly_sound_second.wav" />
+    <None Include="Resources\full_butterfly_sound_third.wav" />
+    <None Include="Resources\full_drag_click.wav" />
+    <None Include="Resources\full_drag_click_2variant.wav" />
+    <None Include="Resources\full_drag_click_3variant.wav" />
+    <None Include="Resources\full_full_godbridge_sound.wav" />
+    <None Include="Resources\full_godbridge_sound.wav" />
+    <None Include="Resources\full_godbridge_sound2.wav" />
+    <None Include="Resources\full_godbridge_sound_2variant.wav" />
+    <None Include="Resources\full_godbridge_sound_3variant.wav" />
+    <None Include="Resources\full_godbridge_sound_second.wav" />
+    <None Include="Resources\full_godbridge_sound_third.wav" />
+    <None Include="Resources\full_telly_sound.wav" />
+    <None Include="Resources\full_telly_sound_2variant.wav" />
+    <None Include="Resources\full_telly_sound_3variant.wav" />
+    <None Include="Resources\g303.wav" />
+    <None Include="Resources\g3032.wav" />
+    <None Include="Resources\G502.wav" />
+    <None Include="Resources\gb_sound.wav" />
+    <None Include="Resources\glorious_model_final.wav" />
+    <None Include="Resources\godbridge_sound.wav" />
+    <None Include="Resources\godbridge_sound2.wav" />
+    <None Include="Resources\godbridge_sound2_corrected.wav" />
+    <None Include="Resources\godbridge_sound_fn.wav" />
+    <None Include="Resources\GPro.wav" />
+    <None Include="Resources\hp.wav" />
+    <None Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Include="Resources\IconsNonShared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Include="Resources\low_butterfly.wav" />
+    <None Include="Resources\microsoft.wav" />
+    <None Include="Resources\ninth_butterfly.wav" />
+    <None Include="Resources\ninth_dragclick.wav" />
+    <None Include="Resources\normal.wav" />
+    <None Include="Resources\octavo_click.wav" />
+    <None Include="Resources\octavo_silencio.wav" />
+    <None Include="Resources\oldmouse.wav" />
+    <None Include="Resources\second_breezily.wav" />
+    <None Include="Resources\second_butterfly.wav" />
+    <None Include="Resources\second_click.wav" />
+    <None Include="Resources\second_dragclick.wav" />
+    <None Include="Resources\second_glorious_model1.wav" />
+    <None Include="Resources\second_godbridge.wav" />
+    <None Include="Resources\second_godbridge_sound.wav" />
+    <None Include="Resources\second_jitter.wav" />
+    <None Include="Resources\second_left_normal_click.wav" />
+    <None Include="Resources\second_moonwalk.wav" />
+    <None Include="Resources\second_normal_click.wav" />
+    <None Include="Resources\second_silence.wav" />
+    <None Include="Resources\second_telly.wav" />
+    <None Include="Resources\septimo_click.wav" />
+    <None Include="Resources\septimo_silence.wav" />
+    <None Include="Resources\seventh_butterfly.wav" />
+    <None Include="Resources\seventh_dragclick.wav" />
+    <None Include="Resources\seventh_telly.wav" />
+    <None Include="Resources\sixth_butterfly.wav" />
+    <None Include="Resources\sixth_click.wav" />
+    <None Include="Resources\sixth_dragclick.wav" />
+    <None Include="Resources\sixth_jitter.wav" />
+    <None Include="Resources\sixth_normal_click.wav" />
+    <None Include="Resources\sixth_silence.wav" />
+    <None Include="Resources\sixth_telly.wav" />
+    <None Include="Resources\spacebar_sound.wav" />
+    <None Include="Resources\third_breezily.wav" />
+    <None Include="Resources\third_butterfly.wav" />
+    <None Include="Resources\third_click.wav" />
+    <None Include="Resources\third_dragclick.wav" />
+    <None Include="Resources\third_godbridge.wav" />
+    <None Include="Resources\third_jitter.wav" />
+    <None Include="Resources\third_left_normal_click.wav" />
+    <None Include="Resources\third_moonwalk.wav" />
+    <None Include="Resources\third_normal_click.wav" />
+    <None Include="Resources\third_silence.wav" />
+    <None Include="Resources\third_telly.wav" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -169,21 +289,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="hooks\MouseHook.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <None Include="packages.config" />
-    <Resource Include="Resources\Entypo.ttf" />
-    <None Include="Resources\Icons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Resources\IconsNonShared.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -212,355 +322,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\G502.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\g3032.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GPro.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hp.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\microsoft.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\normal.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\oldmouse.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\g303.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\deathadder.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\WindowsIcons-license.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Entypo-license.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_glorious_model1.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_glorious_model1.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\glorious_model_final.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\godbridge_sound.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gb_sound.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\godbridge_sound2.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\godbridge_sound_fn.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\spacebar_sound.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_godbridge_sound.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\albypro_gb.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\albypro_gb2.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\albypro_gb3.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\albypro_gb4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\albypro_gb5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fifth_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fifth_silence.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_silence.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fourth_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fourth_silence.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\octavo_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\octavo_silencio.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_silence.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\septimo_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\septimo_silence.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sixth_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sixth_silence.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\third_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\third_silence.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_full_godbridge_sound.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\drag_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_godbridge_sound2.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\godbridge_sound2_corrected.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\low_butterfly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_butterfly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_butterfly_final.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_godbridge_sound_second.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_godbridge_sound_third.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_butterfly_sound_second.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_butterfly_sound_third.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_butterfly_first.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_godbridge_sound_2variant.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_godbridge_sound.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_godbridge_sound_3variant.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_drag_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_drag_click_2variant.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_drag_click_3variant.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_telly_sound.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_telly_sound_2variant.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\full_telly_sound_3variant.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eight_telly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fifth_telly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_telly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fourth_telly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_telly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\seventh_telly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sixth_telly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\third_telly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fifth_godbridge.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_godbridge.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fourth_godbridge.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_godbridge.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\third_godbridge.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eight_dragclick.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fifth_dragclick.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_dragclick.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fourth_dragclick.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninth_dragclick.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_dragclick.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\seventh_dragclick.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sixth_dragclick.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\third_dragclick.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_breezily.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_breezily.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\third_breezily.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_moonwalk.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_moonwalk.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\third_moonwalk.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fifth_jitter.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_jitter.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fourth_jitter.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_jitter.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sixth_jitter.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\third_jitter.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sixth_normal_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\third_normal_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fifth_normal_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_normal_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fourth_normal_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_normal_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_left_normal_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_left_normal_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\third_left_normal_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fourth_left_normal_click.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eigth_butterfly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fifth_butterfly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\first_butterfly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fourth_butterfly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninth_butterfly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\second_butterfly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\seventh_butterfly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sixth_butterfly.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\third_butterfly.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Costura.Fody" Version="5.8.0-alpha0098">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+    <Resource Include="Resources\Entypo.ttf" />
+    <Resource Include="Resources\WindowsIcons-license.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.2.1\build\MaterialDesignThemes.targets')" />
