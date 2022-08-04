@@ -70,13 +70,13 @@ public class ColorPickerUtil
     {
         if (_mainWindow.RainbowThread.IsAlive) _mainWindow.RainbowThread.Abort();
         
-        Color numberColor = Color.FromRgb(255, 109, 0);
+        Color numberColor = Color.FromRgb(255, 155, 0);
         SolidColorBrush brush = new SolidColorBrush(numberColor);
         float defaultColorNumber = ColorConversion.ColorToRainbowNumber(brush);
         
         SetLabelsColorBasedOnThemeColor(defaultColorNumber);
         SetLabelsForegroundColor();
-        SetTabColorToColorString("#FF5700");
+        SetTabColorToColorString("#FF8D00");
         SetComponentsColor(defaultColorNumber);
     }
 

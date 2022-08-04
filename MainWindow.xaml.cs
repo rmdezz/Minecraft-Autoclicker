@@ -19,6 +19,9 @@ namespace Autoclicker;
 public partial class MainWindow
 {
 	public static bool IsRunning = true;
+	public static bool RightClickerThreadAborted = false;
+	public static bool LeftClickerThreadAborted = false;
+	
 	    
 	public int LeftClickerKey;
 	public int GetInventoryKey;

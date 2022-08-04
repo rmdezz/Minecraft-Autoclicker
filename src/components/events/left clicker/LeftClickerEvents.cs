@@ -46,11 +46,13 @@ public class LeftClickerEvents
         {
             Priority = ThreadPriority.Highest
         };
+        MainWindow.LeftClickerThreadAborted = false;
         _componentsEvents.MainWindow.LeftClickerThread.Start();
     }
 
     public void LeftClickerCheckbox_Unchecked(object sender, RoutedEventArgs e)
     {
+        MainWindow.LeftClickerThreadAborted = true;
         _componentsEvents.MainWindow.LeftClickerThread?.Abort();
     }
 }

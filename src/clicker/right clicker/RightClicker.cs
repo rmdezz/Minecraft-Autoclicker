@@ -19,7 +19,7 @@ public class RightClicker
         ClickerData.RightClicker.OldLowerCpsMs = 0;
         ClickerData.RightClicker.OldUpperCpsMs = 0;
 
-        while (MainWindow.IsRunning)
+        while (MainWindow.IsRunning && !MainWindow.RightClickerThreadAborted)
         {
             if (Clicker.MainWindow.Dispatcher == null) return;
                 

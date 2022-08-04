@@ -20,7 +20,7 @@ public class LeftClicker
         ClickerData.LeftClicker.OldLowerCpsMs = 0;
         ClickerData.LeftClicker.OldUpperCpsMs = 0;
             
-        while (MainWindow.IsRunning)
+        while (MainWindow.IsRunning && !MainWindow.LeftClickerThreadAborted)
         {
             if (Clicker.MainWindow.Dispatcher == null) return;
             

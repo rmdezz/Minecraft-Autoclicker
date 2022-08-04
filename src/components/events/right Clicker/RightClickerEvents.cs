@@ -33,11 +33,14 @@ public class RightClickerEvents
         {
             Priority = ThreadPriority.Highest
         };
+        MainWindow.RightClickerThreadAborted = false;
         _componentsEvents.MainWindow.RightClickerThread.Start();
+        
     }
 
     public void RightClickerCheckbox_Unchecked(object sender, RoutedEventArgs e)
     {
+        MainWindow.RightClickerThreadAborted = true;
         _componentsEvents.MainWindow.RightClickerThread?.Abort();
     }
 }

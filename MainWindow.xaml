@@ -90,7 +90,6 @@
                                 VerticalAlignment="Top" 
                                 Width="150" 
                                 Fill="#FF9B00"
-                                ToolTip="LEFT MOUSE BUTTON CLICKER."
                                 ToolTipService.Placement="Right"/>
 
                         <Label 
@@ -131,7 +130,7 @@
                                         VerticalAlignment="Top" 
                                         Width="100" 
                                         Fill="#FF9B00"
-                                        ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                        ToolTip="Allows to change the UI color."
                                         ToolTipService.Placement="Right"/>
 
                         <Label 
@@ -247,7 +246,7 @@
                                         VerticalAlignment="Top" 
                                         Width="120" 
                                         Fill="#FF9B00"
-                                        ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                        ToolTip="Allows to change the priority of the main threads."
                                         ToolTipService.Placement="Right"/>
 
                         <Label 
@@ -320,7 +319,7 @@
                                         VerticalAlignment="Top" 
                                         Width="140" 
                                         Fill="#FF9B00"
-                                        ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                        ToolTip="Allows to choose the mouse type and click method."
                                         ToolTipService.Placement="Right"/>
 
                         <Label
@@ -479,7 +478,7 @@
                                         VerticalAlignment="Top" 
                                         Width="130" 
                                         Fill="#FF9B00"
-                                        ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                        ToolTip="Allows to choose the mouse type and click method."
                                         ToolTipService.Placement="Right"/>
 
                         <Label 
@@ -621,7 +620,6 @@
                                 VerticalAlignment="Top" 
                                 Width="120" 
                                 Fill="#FF9B00"
-                                ToolTip="LEFT MOUSE BUTTON CLICKER."
                                 ToolTipService.Placement="Right"/>
 
                         <Label
@@ -833,7 +831,7 @@
                             VerticalAlignment="Center" 
                             Width="100" 
                             Fill="#FF9B00"
-                            ToolTip="LEFT MOUSE BUTTON CLICKER."
+                            ToolTip="Allows you to break blocks while the left autoclicker is active."
                             ToolTipService.Placement="Right"/>
 
                         <Label 
@@ -923,7 +921,7 @@
                                 VerticalAlignment="Top" 
                                 Width="75" 
                                 Fill="#FF9B00"
-                                ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                ToolTip="Allows you to block the other player's hits."
                                 ToolTipService.Placement="Right"/>
 
                         <Label
@@ -995,7 +993,7 @@
                                 Height="24" 
                                 Width="206" 
                                 Fill="#FF9B00"
-                                ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                ToolTip="Allows you to temporarily disable the autoclicker while the inventory is open for a certain configurable length of time."
                                 ToolTipService.Placement="Right" 
                                 VerticalAlignment="Top" 
                                 HorizontalAlignment="Left"/>
@@ -1153,7 +1151,7 @@
                 VerticalAlignment="Top" 
                 Width="53" 
                 Fill="#FF9B00"
-                ToolTip="LEFT MOUSE BUTTON CLICKER."
+                ToolTip="As long as the left mouse button and the LShift key are pressed, it automatically refills the inventory."
                 ToolTipService.Placement="Right"/>
 
                         <Label
@@ -1181,7 +1179,7 @@
                                 VerticalAlignment="Top" 
                                 Width="94" 
                                 Fill="#FF9B00"
-                                ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                ToolTip="Left Mouse Button AutoClicker."
                                 ToolTipService.Placement="Right"/>
 
 
