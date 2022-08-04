@@ -26,7 +26,7 @@ public class ColorPicker
 
     public void CustomRainbow(object obj)
     {
-        while (MainWindow.IsRunning)
+        while (MainWindow.IsRunning && !MainWindow.RainbowThreadAborted)
         {
             bool rainbowChecked = _colorPickerUtil.IsRainbowChecked();
 		        

@@ -18,12 +18,14 @@ public class RainbowColorEvents
         {
             Priority = ThreadPriority.BelowNormal
         };
+        MainWindow.RainbowThreadAborted = false;
         _componentsEvents.MainWindow.RainbowThread.Start();
     }
 
     public void rainbow_checkbox_Unchecked(object sender, RoutedEventArgs e)
     {
-        _componentsEvents.MainWindow.RainbowThread.Abort();
+        MainWindow.RainbowThreadAborted = true;
+        if (_componentsEvents.MainWindow.RainbowThread.IsAlive) _componentsEvents.MainWindow.RainbowThread.Abort();
     }
 
     public void ResetToDefaultCheckbox_Checked(object sender, RoutedEventArgs e)

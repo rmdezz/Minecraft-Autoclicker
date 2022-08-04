@@ -41,6 +41,6 @@ public class RightClickerEvents
     public void RightClickerCheckbox_Unchecked(object sender, RoutedEventArgs e)
     {
         MainWindow.RightClickerThreadAborted = true;
-        _componentsEvents.MainWindow.RightClickerThread?.Abort();
+        if (_componentsEvents.MainWindow.RightClickerThread.IsAlive) _componentsEvents.MainWindow.RightClickerThread?.Abort();
     }
 }

@@ -21,6 +21,7 @@ public partial class MainWindow
 	public static bool IsRunning = true;
 	public static bool RightClickerThreadAborted = false;
 	public static bool LeftClickerThreadAborted = false;
+	public static bool RainbowThreadAborted = false;
 	
 	    
 	public int LeftClickerKey;

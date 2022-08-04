@@ -53,6 +53,6 @@ public class LeftClickerEvents
     public void LeftClickerCheckbox_Unchecked(object sender, RoutedEventArgs e)
     {
         MainWindow.LeftClickerThreadAborted = true;
-        _componentsEvents.MainWindow.LeftClickerThread?.Abort();
+        if (_componentsEvents.MainWindow.LeftClickerThread.IsAlive) _componentsEvents.MainWindow.LeftClickerThread?.Abort();
     }
 }
