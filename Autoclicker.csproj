@@ -159,6 +159,7 @@
     <Compile Include="src\mouse control\MouseControlUtil.cs" />
     <Compile Include="src\mouse control\MoveMouseUtil.cs" />
     <Compile Include="src\random generator\Random.cs" />
+    <Compile Include="src\settings\SettingsUtil.cs" />
     <Compile Include="src\sound\FadeOutSound.cs" />
     <Compile Include="src\sound\ShuffleSounds.cs" />
     <Compile Include="src\sound\SoundData.cs" />
@@ -326,9 +327,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Entypo-license.txt" />

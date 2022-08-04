@@ -8,22 +8,294 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.CodeDom.Compiler;
-using System.Configuration;
-using System.Runtime.CompilerServices;
-
 namespace Autoclicker.Properties {
     
     
-    [CompilerGenerated()]
-    [GeneratedCode("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
-    internal sealed partial class Settings : ApplicationSettingsBase {
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
-        private static Settings defaultInstance = ((Settings)(Synchronized(new Settings())));
+        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
         public static Settings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10.2")]
+        public double left_cps {
+            get {
+                return ((double)(this["left_cps"]));
+            }
+            set {
+                this["left_cps"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BIND A KEY")]
+        public string left_button {
+            get {
+                return ((string)(this["left_button"]));
+            }
+            set {
+                this["left_button"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public double left_lower_bound {
+            get {
+                return ((double)(this["left_lower_bound"]));
+            }
+            set {
+                this["left_lower_bound"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.5")]
+        public double left_upper_bound {
+            get {
+                return ((double)(this["left_upper_bound"]));
+            }
+            set {
+                this["left_upper_bound"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2.5")]
+        public double left_cps_drop_amount {
+            get {
+                return ((double)(this["left_cps_drop_amount"]));
+            }
+            set {
+                this["left_cps_drop_amount"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("22")]
+        public double left_cps_drop_probability {
+            get {
+                return ((double)(this["left_cps_drop_probability"]));
+            }
+            set {
+                this["left_cps_drop_probability"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public double left_jitter_x_axis {
+            get {
+                return ((double)(this["left_jitter_x_axis"]));
+            }
+            set {
+                this["left_jitter_x_axis"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public double left_jitter_y_axis {
+            get {
+                return ((double)(this["left_jitter_y_axis"]));
+            }
+            set {
+                this["left_jitter_y_axis"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("25")]
+        public double left_blockhit_probability {
+            get {
+                return ((double)(this["left_blockhit_probability"]));
+            }
+            set {
+                this["left_blockhit_probability"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        public double left_blockhit_delay {
+            get {
+                return ((double)(this["left_blockhit_delay"]));
+            }
+            set {
+                this["left_blockhit_delay"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public double refill_mouse_speed {
+            get {
+                return ((double)(this["refill_mouse_speed"]));
+            }
+            set {
+                this["refill_mouse_speed"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public double refill_x_axis {
+            get {
+                return ((double)(this["refill_x_axis"]));
+            }
+            set {
+                this["refill_x_axis"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public double refill_y_axis {
+            get {
+                return ((double)(this["refill_y_axis"]));
+            }
+            set {
+                this["refill_y_axis"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public double refill_steps {
+            get {
+                return ((double)(this["refill_steps"]));
+            }
+            set {
+                this["refill_steps"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public double wait_time {
+            get {
+                return ((double)(this["wait_time"]));
+            }
+            set {
+                this["wait_time"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("24.6")]
+        public double right_cps {
+            get {
+                return ((double)(this["right_cps"]));
+            }
+            set {
+                this["right_cps"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4.5")]
+        public double right_lower_bound {
+            get {
+                return ((double)(this["right_lower_bound"]));
+            }
+            set {
+                this["right_lower_bound"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.5")]
+        public double right_upper_bound {
+            get {
+                return ((double)(this["right_upper_bound"]));
+            }
+            set {
+                this["right_upper_bound"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2.5")]
+        public double right_cps_drop_amount {
+            get {
+                return ((double)(this["right_cps_drop_amount"]));
+            }
+            set {
+                this["right_cps_drop_amount"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("22")]
+        public double right_cps_drop_probability {
+            get {
+                return ((double)(this["right_cps_drop_probability"]));
+            }
+            set {
+                this["right_cps_drop_probability"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4.69")]
+        public double right_jitter_x_axis {
+            get {
+                return ((double)(this["right_jitter_x_axis"]));
+            }
+            set {
+                this["right_jitter_x_axis"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.31")]
+        public double right_jitter_y_axis {
+            get {
+                return ((double)(this["right_jitter_y_axis"]));
+            }
+            set {
+                this["right_jitter_y_axis"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Lunar Client")]
+        public string minecraft_client {
+            get {
+                return ((string)(this["minecraft_client"]));
+            }
+            set {
+                this["minecraft_client"] = value;
             }
         }
     }

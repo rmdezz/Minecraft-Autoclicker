@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
 using Autoclicker.clicker;
@@ -72,7 +73,8 @@ public partial class MainWindow
 	public Thread MinecraftThread;
 	    
 	public SolidColorBrush SelectedColor;
-	    
+	private readonly SettingsUtil _settingsUtil;
+
 
 	/* Declare DLL */
 	[DllImport("user32.dll", SetLastError = true)]
@@ -92,6 +94,7 @@ public partial class MainWindow
 		ColorPicker = new ColorPicker(this);
 		SetTheme();
 		ComponentsEvents = new ComponentsEvents(this);
+		_settingsUtil = new SettingsUtil(this);
 	}
 
 	private static void SetTheme()
@@ -115,13 +118,16 @@ public partial class MainWindow
 		Process process = Process.GetCurrentProcess();
 		process.PriorityBoostEnabled = true;
 		process.PriorityClass = ProcessPriorityClass.High;
-			
+
+		_settingsUtil.GetSettings();
 		SetDefaultValuesOnLoad();
 	}
 
 	private void SetDefaultValuesOnLoad()
 	{
 		/* Set default values */
+		
+		/*
 		LeftCpsDropProbabilitySlider.Value = 22;
 		LeftCpsDropAmountSlider.Value = 2.5;
 		LeftCpsDropAmountSlider.Minimum = 0;
@@ -131,7 +137,8 @@ public partial class MainWindow
 		RefillStepsRandomSlider.Value = 30;
 		RefillXAxisRandomSlider.Value = 5;
 		RefillYAxisRandomSlider.Value = 5;
-
+		*/
+		
 		LeftClickerPriorityThread.Items.Add("Below Normal");
 		LeftClickerPriorityThread.Items.Add("Above Normal");
 		LeftClickerPriorityThread.Items.Add("Normal");
@@ -172,6 +179,7 @@ public partial class MainWindow
 	private void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
 	{
 		IsRunning = false;
+		_settingsUtil.SaveSettings();
 		if (LeftClickerThread.IsAlive) LeftClickerThread.Abort();
 		if (RightClickerThread.IsAlive) RightClickerThread.Abort();
 		if (RainbowThread.IsAlive) RainbowThread.Abort();

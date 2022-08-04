@@ -1,7 +1,78 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
   <Profiles>
     <Profile Name="(Default)" />
   </Profiles>
-  <Settings />
+  <Settings>
+    <Setting Name="left_cps" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10.2</Value>
+    </Setting>
+    <Setting Name="left_button" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BIND A KEY</Value>
+    </Setting>
+    <Setting Name="left_lower_bound" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="left_upper_bound" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1.5</Value>
+    </Setting>
+    <Setting Name="left_cps_drop_amount" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2.5</Value>
+    </Setting>
+    <Setting Name="left_cps_drop_probability" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">22</Value>
+    </Setting>
+    <Setting Name="left_jitter_x_axis" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="left_jitter_y_axis" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="left_blockhit_probability" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="left_blockhit_delay" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="refill_mouse_speed" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="refill_x_axis" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="refill_y_axis" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="refill_steps" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="wait_time" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="right_cps" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">24.6</Value>
+    </Setting>
+    <Setting Name="right_lower_bound" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">4.5</Value>
+    </Setting>
+    <Setting Name="right_upper_bound" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1.5</Value>
+    </Setting>
+    <Setting Name="right_cps_drop_amount" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2.5</Value>
+    </Setting>
+    <Setting Name="right_cps_drop_probability" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">22</Value>
+    </Setting>
+    <Setting Name="right_jitter_x_axis" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">4.69</Value>
+    </Setting>
+    <Setting Name="right_jitter_y_axis" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1.31</Value>
+    </Setting>
+    <Setting Name="minecraft_client" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Lunar Client</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
+
