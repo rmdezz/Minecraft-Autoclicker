@@ -63,60 +63,6 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream albypro_gb {
-            get {
-                return ResourceManager.GetStream("albypro_gb", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream albypro_gb2 {
-            get {
-                return ResourceManager.GetStream("albypro_gb2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream albypro_gb3 {
-            get {
-                return ResourceManager.GetStream("albypro_gb3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream albypro_gb4 {
-            get {
-                return ResourceManager.GetStream("albypro_gb4", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream albypro_gb5 {
-            get {
-                return ResourceManager.GetStream("albypro_gb5", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream drag_click {
-            get {
-                return ResourceManager.GetStream("drag_click", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream eight_dragclick {
             get {
                 return ResourceManager.GetStream("eight_dragclick", resourceCulture);
@@ -147,15 +93,6 @@ namespace Autoclicker.Properties {
         internal static System.IO.UnmanagedMemoryStream fifth_butterfly {
             get {
                 return ResourceManager.GetStream("fifth_butterfly", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fifth_click {
-            get {
-                return ResourceManager.GetStream("fifth_click", resourceCulture);
             }
         }
         
@@ -198,15 +135,6 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fifth_silence {
-            get {
-                return ResourceManager.GetStream("fifth_silence", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream fifth_telly {
             get {
                 return ResourceManager.GetStream("fifth_telly", resourceCulture);
@@ -234,27 +162,9 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream first_click {
-            get {
-                return ResourceManager.GetStream("first_click", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream first_dragclick {
             get {
                 return ResourceManager.GetStream("first_dragclick", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream first_glorious_model1 {
-            get {
-                return ResourceManager.GetStream("first_glorious_model1", resourceCulture);
             }
         }
         
@@ -306,15 +216,6 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream first_silence {
-            get {
-                return ResourceManager.GetStream("first_silence", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream first_telly {
             get {
                 return ResourceManager.GetStream("first_telly", resourceCulture);
@@ -327,15 +228,6 @@ namespace Autoclicker.Properties {
         internal static System.IO.UnmanagedMemoryStream fourth_butterfly {
             get {
                 return ResourceManager.GetStream("fourth_butterfly", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fourth_click {
-            get {
-                return ResourceManager.GetStream("fourth_click", resourceCulture);
             }
         }
         
@@ -387,225 +279,9 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fourth_silence {
-            get {
-                return ResourceManager.GetStream("fourth_silence", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream fourth_telly {
             get {
                 return ResourceManager.GetStream("fourth_telly", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_butterfly {
-            get {
-                return ResourceManager.GetStream("full_butterfly", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_butterfly_final {
-            get {
-                return ResourceManager.GetStream("full_butterfly_final", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_butterfly_first {
-            get {
-                return ResourceManager.GetStream("full_butterfly_first", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_butterfly_sound_second {
-            get {
-                return ResourceManager.GetStream("full_butterfly_sound_second", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_butterfly_sound_third {
-            get {
-                return ResourceManager.GetStream("full_butterfly_sound_third", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_drag_click {
-            get {
-                return ResourceManager.GetStream("full_drag_click", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_drag_click_2variant {
-            get {
-                return ResourceManager.GetStream("full_drag_click_2variant", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_drag_click_3variant {
-            get {
-                return ResourceManager.GetStream("full_drag_click_3variant", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_full_godbridge_sound {
-            get {
-                return ResourceManager.GetStream("full_full_godbridge_sound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_godbridge_sound {
-            get {
-                return ResourceManager.GetStream("full_godbridge_sound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_godbridge_sound_2variant {
-            get {
-                return ResourceManager.GetStream("full_godbridge_sound_2variant", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_godbridge_sound_3variant {
-            get {
-                return ResourceManager.GetStream("full_godbridge_sound_3variant", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_godbridge_sound2 {
-            get {
-                return ResourceManager.GetStream("full_godbridge_sound2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_telly_sound {
-            get {
-                return ResourceManager.GetStream("full_telly_sound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_telly_sound_2variant {
-            get {
-                return ResourceManager.GetStream("full_telly_sound_2variant", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream full_telly_sound_3variant {
-            get {
-                return ResourceManager.GetStream("full_telly_sound_3variant", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream gb_sound {
-            get {
-                return ResourceManager.GetStream("gb_sound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream glorious_model_final {
-            get {
-                return ResourceManager.GetStream("glorious_model_final", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream godbridge_sound {
-            get {
-                return ResourceManager.GetStream("godbridge_sound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream godbridge_sound_fn {
-            get {
-                return ResourceManager.GetStream("godbridge_sound_fn", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream godbridge_sound2 {
-            get {
-                return ResourceManager.GetStream("godbridge_sound2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream godbridge_sound2_corrected {
-            get {
-                return ResourceManager.GetStream("godbridge_sound2_corrected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream HP_Mouse {
-            get {
-                return ResourceManager.GetStream("HP_Mouse", resourceCulture);
             }
         }
         
@@ -642,60 +318,6 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Logitech_G303 {
-            get {
-                return ResourceManager.GetStream("Logitech_G303", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Logitech_G303_E {
-            get {
-                return ResourceManager.GetStream("Logitech_G303-E", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Logitech_G502 {
-            get {
-                return ResourceManager.GetStream("Logitech-G502", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Logitech_GPro {
-            get {
-                return ResourceManager.GetStream("Logitech_GPro", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream low_butterfly {
-            get {
-                return ResourceManager.GetStream("low_butterfly", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Microsoft_Mouse {
-            get {
-                return ResourceManager.GetStream("Microsoft_Mouse", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream ninth_butterfly {
             get {
                 return ResourceManager.GetStream("ninth_butterfly", resourceCulture);
@@ -708,33 +330,6 @@ namespace Autoclicker.Properties {
         internal static System.IO.UnmanagedMemoryStream ninth_dragclick {
             get {
                 return ResourceManager.GetStream("ninth_dragclick", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream octavo_click {
-            get {
-                return ResourceManager.GetStream("octavo_click", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream octavo_silencio {
-            get {
-                return ResourceManager.GetStream("octavo_silencio", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream RazerDeathAdder {
-            get {
-                return ResourceManager.GetStream("RazerDeathAdder", resourceCulture);
             }
         }
         
@@ -777,27 +372,9 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream second_glorious_model1 {
-            get {
-                return ResourceManager.GetStream("second_glorious_model1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream second_godbridge {
             get {
                 return ResourceManager.GetStream("second_godbridge", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream second_godbridge_sound {
-            get {
-                return ResourceManager.GetStream("second_godbridge_sound", resourceCulture);
             }
         }
         
@@ -840,36 +417,9 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream second_silence {
-            get {
-                return ResourceManager.GetStream("second_silence", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream second_telly {
             get {
                 return ResourceManager.GetStream("second_telly", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream septimo_click {
-            get {
-                return ResourceManager.GetStream("septimo_click", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream septimo_silence {
-            get {
-                return ResourceManager.GetStream("septimo_silence", resourceCulture);
             }
         }
         
@@ -912,15 +462,6 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream sixth_click {
-            get {
-                return ResourceManager.GetStream("sixth_click", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream sixth_dragclick {
             get {
                 return ResourceManager.GetStream("sixth_dragclick", resourceCulture);
@@ -948,27 +489,9 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream sixth_silence {
-            get {
-                return ResourceManager.GetStream("sixth_silence", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream sixth_telly {
             get {
                 return ResourceManager.GetStream("sixth_telly", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream spacebar_sound {
-            get {
-                return ResourceManager.GetStream("spacebar_sound", resourceCulture);
             }
         }
         
@@ -1056,36 +579,9 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream third_silence {
-            get {
-                return ResourceManager.GetStream("third_silence", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream third_telly {
             get {
                 return ResourceManager.GetStream("third_telly", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Unknown_Mouse {
-            get {
-                return ResourceManager.GetStream("Unknown_Mouse", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Unknown_Mouse_2 {
-            get {
-                return ResourceManager.GetStream("Unknown_Mouse_2", resourceCulture);
             }
         }
     }

@@ -118,24 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="albypro_gb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\albypro_gb.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="albypro_gb2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\albypro_gb2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="albypro_gb3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\albypro_gb3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="albypro_gb4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\albypro_gb4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="albypro_gb5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\albypro_gb5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="drag_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\drag_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="eight_dragclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eight_dragclick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -147,9 +129,6 @@
   </data>
   <data name="fifth_butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fifth_butterfly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fifth_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fifth_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="fifth_dragclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fifth_dragclick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -163,9 +142,6 @@
   <data name="fifth_normal_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fifth_normal_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="fifth_silence" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fifth_silence.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="fifth_telly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fifth_telly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -175,14 +151,8 @@
   <data name="first_butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\first_butterfly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="first_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\first_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="first_dragclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\first_dragclick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="first_glorious_model1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\first_glorious_model1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="first_godbridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\first_godbridge.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -199,17 +169,11 @@
   <data name="first_normal_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\first_normal_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="first_silence" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\first_silence.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="first_telly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\first_telly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="fourth_butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fourth_butterfly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fourth_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fourth_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="fourth_dragclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fourth_dragclick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -226,80 +190,8 @@
   <data name="fourth_normal_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fourth_normal_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="fourth_silence" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fourth_silence.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="fourth_telly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fourth_telly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_butterfly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_butterfly_final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_butterfly_final.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_butterfly_first" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_butterfly_first.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_butterfly_sound_second" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_butterfly_sound_second.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_butterfly_sound_third" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_butterfly_sound_third.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_drag_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_drag_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_drag_click_2variant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_drag_click_2variant.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_drag_click_3variant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_drag_click_3variant.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_full_godbridge_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_full_godbridge_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_godbridge_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_godbridge_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_godbridge_sound2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_godbridge_sound2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_godbridge_sound_2variant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_godbridge_sound_2variant.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_godbridge_sound_3variant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_godbridge_sound_3variant.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_telly_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_telly_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_telly_sound_2variant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_telly_sound_2variant.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="full_telly_sound_3variant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full_telly_sound_3variant.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="gb_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gb_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="glorious_model_final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glorious_model_final.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="godbridge_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\godbridge_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="godbridge_sound2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\godbridge_sound2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="godbridge_sound2_corrected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\godbridge_sound2_corrected.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="godbridge_sound_fn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\godbridge_sound_fn.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="HP_Mouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hp.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Icons" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
@@ -307,38 +199,11 @@
   <data name="IconsNonShared" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconsNonShared.xaml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="Logitech-G502" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\G502.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Logitech_G303" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\g303.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Logitech_G303-E" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\g3032.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Logitech_GPro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GPro.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="low_butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\low_butterfly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Microsoft_Mouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\microsoft.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="ninth_butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ninth_butterfly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ninth_dragclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ninth_dragclick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="octavo_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\octavo_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="octavo_silencio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\octavo_silencio.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RazerDeathAdder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deathadder.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="second_breezily" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\second_breezily.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -352,14 +217,8 @@
   <data name="second_dragclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\second_dragclick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="second_glorious_model1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\second_glorious_model1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="second_godbridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\second_godbridge.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="second_godbridge_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\second_godbridge_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="second_jitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\second_jitter.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -373,17 +232,8 @@
   <data name="second_normal_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\second_normal_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="second_silence" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\second_silence.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="second_telly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\second_telly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="septimo_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\septimo_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="septimo_silence" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\septimo_silence.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="seventh_butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\seventh_butterfly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -397,9 +247,6 @@
   <data name="sixth_butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sixth_butterfly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="sixth_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sixth_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="sixth_dragclick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sixth_dragclick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -409,14 +256,8 @@
   <data name="sixth_normal_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sixth_normal_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="sixth_silence" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sixth_silence.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="sixth_telly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sixth_telly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="spacebar_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spacebar_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="third_breezily" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\third_breezily.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -445,16 +286,7 @@
   <data name="third_normal_click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\third_normal_click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="third_silence" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\third_silence.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="third_telly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\third_telly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Unknown_Mouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\oldmouse.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Unknown_Mouse_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\normal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
