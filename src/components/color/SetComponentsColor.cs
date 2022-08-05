@@ -70,6 +70,8 @@ public class SetComponentsColor
             SliderToSelectedColor(_colorPicker.MainWindow.RightClickerJitterYAxis, selectedRainbowNumber);
             SliderToSelectedColor(_colorPicker.MainWindow.BlockhitDelaySlider, selectedRainbowNumber);
             SliderToSelectedColor(_colorPicker.MainWindow.RainbowDelaySlider, selectedRainbowNumber);
+            SliderToSelectedColor(_colorPicker.MainWindow.RightCpsDelimiterSlider, selectedRainbowNumber);
+            SliderToSelectedColor(_colorPicker.MainWindow.CpsDelimiterSlider, selectedRainbowNumber);
         });
         
     }
@@ -154,6 +156,8 @@ public class SetComponentsColor
             RectangleToSelectedColor(_colorPicker.MainWindow.MinecraftStatusRectangle, selectedRainbowNumber);
             RectangleToSelectedColor(_colorPicker.MainWindow.RightSoundPickerRectangle, selectedRainbowNumber);
             RectangleToSelectedColor(_colorPicker.MainWindow.LeftSoundPickerRectangle, selectedRainbowNumber);
+            RectangleToSelectedColor(_colorPicker.MainWindow.RightCpsDelimiterRectangle, selectedRainbowNumber);
+            RectangleToSelectedColor(_colorPicker.MainWindow.CpsDelimiterRectangle, selectedRainbowNumber);
         });
     }
 

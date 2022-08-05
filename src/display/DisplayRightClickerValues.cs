@@ -51,4 +51,10 @@ public class DisplayRightClickerValues
     {
         _displayValues.MainWindow.RainbowDelayLabel.Content = Math.Round(_displayValues.MainWindow.RainbowDelaySlider.Value, 2) + " MS";
     }
+
+    public void RightCpsDelimiterValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+    {
+        _displayValues.MainWindow.RightCpsDelimiterText.Content = Math.Round(_displayValues.MainWindow.RightCpsDelimiterSlider.Value, 2) + " MAX CPS";
+        _displayValues.MainWindow.RightCpsSlider.Maximum = _displayValues.MainWindow.RightCpsDelimiterSlider.Value;
+    }
 }

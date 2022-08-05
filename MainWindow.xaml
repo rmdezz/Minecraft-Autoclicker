@@ -33,6 +33,1223 @@
                 </LinearGradientBrush>
             </controls:TabControlHelper.UnderlineBrush>
 
+            <TabItem Header="RIGHT CLICKER" Foreground="{DynamicResource TextBrush}">
+                <Grid>
+
+                    <Grid x:Name="RightClickerMainGrid" 
+                              HorizontalAlignment="Left" 
+                              Height="350" 
+                              Margin="65,45,0,0" 
+                              VerticalAlignment="Top" 
+                              Width="290">
+
+                        <Rectangle 
+                                x:Name="RightButtonRectangle" 
+                                HorizontalAlignment="Left" 
+                                Height="24" 
+                                VerticalAlignment="Top" 
+                                Width="100" 
+                                Fill="#FF9B00"
+                                ToolTipService.Placement="Right"/>
+
+
+                        <Label 
+                                x:Name="RightButtonLabel"
+                                Content = "RIGHT BUTTON"
+                                HorizontalAlignment = "Left"
+                                Margin = "5,0,0,0"
+                                VerticalAlignment = "Top"
+                                Background = "{x:Null}"
+                                FontFamily = "Segoe UI Semibold"
+                                ToolTip="Right Mouse Button AutoClicker."
+                                Foreground = "#FF150909"/>
+
+                        <Label
+                                Content="Clicks per second"
+                                HorizontalAlignment="Left"
+                                Margin="0,40,0,0"
+                                VerticalAlignment="Top"
+                                FontFamily="Segoe UI Semilight"/>
+
+                        <Slider
+                                x:Name = "RightCpsSlider"
+                                HorizontalAlignment="Center"
+                                Margin="50,45,0,0"
+                                VerticalAlignment="Top"
+                                Width="120"
+                                Value="10"
+                                Minimum="5"
+                                Maximum="30" 
+                                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                Background="#FF1B191B"
+                                BorderBrush="#FF2F2C2F"
+                                Foreground="#FF9B00"/>
+
+                        <Label 
+                                x:Name = "RightCpsText"
+                                FontSize="11"
+                                Content="10 CPS"
+                                HorizontalAlignment="Right"
+                                Margin="0,40,0,0"
+                                VerticalAlignment="Top"
+                                Background="{x:Null}"
+                                Foreground="#FFE3E3E3"
+                                FontFamily="Segoe UI Semibold"/>
+
+                        <Button 
+                                x:Name="RightClickerButton"
+                                HorizontalAlignment="Right"
+                                Margin="150,0,0,0"
+                                VerticalAlignment="Top"
+                                Width="76" 
+                                Height="24" 
+                                Content="BIND A KEY" 
+                                FontSize="8" 
+                                Background="#FF9B00" 
+                                BorderBrush="{x:Null}" />
+
+                        <CheckBox
+                                x:Name="RightClickerCheckbox"
+                                HorizontalAlignment="Left" 
+                                Margin="115,3,0,0" 
+                                VerticalAlignment="Top"/>
+                    </Grid>
+
+                    <Grid x:Name="RightClickerBoundsGrid"
+                              HorizontalAlignment="Left"
+                              VerticalAlignment="Center"
+                              Margin="65, 0, 0, 100"
+                              Width="290">
+
+                        <Rectangle 
+                                        x:Name="RightButtonBoundsRectangle" 
+                                        HorizontalAlignment="Left" 
+                                        Height="24" 
+                                        VerticalAlignment="Top" 
+                                        Width="69" 
+                                        Fill="#FF9B00"
+                                        ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                        ToolTipService.Placement="Right"
+                                        Margin="0,0,0,0"/>
+
+                        <Label 
+                                        x:Name="LeftBoundsLabel"
+                                        Content = "BOUNDS"
+                                        HorizontalAlignment = "Left"
+                                        Margin = "6,0,0,0"
+                                        VerticalAlignment = "Top"
+                                        Background = "{x:Null}"
+                                        Foreground = "#FF150909"
+                                        FontFamily = "Segoe UI Semibold"/>
+
+                        <Label
+                                        Content="Lower Bound"
+                                        HorizontalAlignment="Left"
+                                        Margin="0,40,0,0"
+                                        VerticalAlignment="Top"
+                                        ToolTip="Tip: For smaller values, use the arrow keys to increase the slider."
+                                        FontFamily="Segoe UI Semilight"/>
+
+                        <Slider
+                                        x:Name = "RightLowerCpsSlider"
+                                        HorizontalAlignment="Center"
+                                        Margin="0,45,0,0"
+                                        VerticalAlignment="Top"
+                                        Width="100"
+                                        Minimum="0"
+                                        Maximum="9" 
+                                        Value="3"
+                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                        Background="#FF1B191B"
+                                        BorderBrush="#FF2F2C2F"
+                                        Foreground="#FF9B00"/>
+
+                        <Label 
+                                        x:Name = "RightLowerCpsText"
+                                        FontSize="11"
+                                        Content="3 LESS CPS"
+                                        HorizontalAlignment="Right"
+                                        Margin="0,40,0,0"
+                                        VerticalAlignment="Top"
+                                        Background="{x:Null}"
+                                        Foreground="#FFE3E3E3"
+                                        FontFamily="Segoe UI Semibold"/>
+
+                        <Label
+                                        Content="Upper Bound"
+                                        HorizontalAlignment="Left"
+                                        Margin="0,70,0,0"
+                                        VerticalAlignment="Top"
+                                        ToolTip="Tip: For smaller values, use the arrow keys to increase the slider."
+                                        FontFamily="Segoe UI Semilight"/>
+
+                        <Slider
+                                        x:Name = "RightUpperCpsSlider"
+                                        HorizontalAlignment="Center"
+                                        Margin="0,75,0,0"
+                                        VerticalAlignment="Top"
+                                        Width="100"
+                                        Maximum="20"
+                                        Minimum="0"
+                                        Value="1.5"
+                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                        Background="#FF1B191B"
+                                        BorderBrush="#FF2F2C2F"
+                                        Foreground="#FF9B00"/>
+
+                        <Label 
+                                        x:Name = "RightUpperCpsText"
+                                        FontSize="11"
+                                        Content="1.5 MORE CPS"
+                                        HorizontalAlignment="Right"
+                                        Margin="0,70,0,0"
+                                        VerticalAlignment="Top"
+                                        Background="{x:Null}"
+                                        Foreground="#FFE3E3E3"
+                                        FontFamily="Segoe UI Semibold"/>
+
+                    </Grid>
+
+                    <Grid x:Name="RightClickerCpsDropGrid"
+                              VerticalAlignment="Bottom"
+                              HorizontalAlignment="Left"
+                              Margin="65,0, 0, 130"
+                              Width="290">
+
+                        <Rectangle 
+                                        x:Name="RightButtonCpsDropRectangle"
+                                        HorizontalAlignment="Left" 
+                                        Height="24" 
+                                        Margin="0,0,0,0" 
+                                        VerticalAlignment="Top" 
+                                        Width="75" 
+                                        Fill="#FF9B00"
+                                        ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                        ToolTipService.Placement="Right"/>
+
+                        <Label
+                                        x:Name="CpsDropLabel"
+                                        Content="CPS DROP"
+                                        HorizontalAlignment="Left"
+                                        Margin="7,0,0,0"
+                                        VerticalAlignment="Top"
+                                        Background="{x:Null}"
+                                        Foreground="#FF150909"
+                                        ToolTip="Set the amount of cps drop and the probability of the drop happening."
+                                        FontFamily="Segoe UI Semibold"/>
+
+                        <Label 
+                                        Content="Amount" 
+                                        FontFamily="Segoe UI Semilight" 
+                                        VerticalAlignment="Top" 
+                                        Margin="0,40,0,0" 
+                                        HorizontalAlignment="Left"/>
+
+                        <Slider 
+                                        x:Name="RightCpsDropAmountSlider" 
+                                        Margin="0,45,0,0" 
+                                        VerticalAlignment="Top" 
+                                        Maximum="30"
+                                        HorizontalAlignment="Center" 
+                                        Width="100" 
+                                        Value="2.5"
+                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                        Background="#FF1B191B"
+                                        BorderBrush="#FF2F2C2F"
+                                        Foreground="#FF9B00"/>
+
+                        <Label 
+                                        x:Name="RightCpsDropAmountText"
+                                        Content="2.5 CPS" 
+                                        HorizontalAlignment="Right" 
+                                        Margin="0,40,0,0" 
+                                        VerticalAlignment="Top" 
+                                        Background="{x:Null}" 
+                                        Foreground="#FFE8E8E8" 
+                                        FontFamily="Segoe UI Semibold"/>
+
+                        <Label 
+                                        Content="Probability" 
+                                        HorizontalAlignment="Left" 
+                                        Margin="0,70,0,0" 
+                                        VerticalAlignment="Top" 
+                                        FontFamily="Segoe UI Semilight"/>
+
+                        <Slider 
+                                        x:Name="RightCpsDropProbabilitySlider"
+                                        HorizontalAlignment="Center" 
+                                        Margin="0,75,0,0" 
+                                        VerticalAlignment="Top"
+                                        Width="100" 
+                                        Minimum="0"
+                                        Maximum="100" 
+                                        Value="22"
+                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                        Background="#FF1B191B"
+                                        BorderBrush="#FF2F2C2F"
+                                        Foreground="#FF9B00"/>
+
+                        <Label 
+                                        x:Name="RightCpsDropProbabilityText"
+                                        Content="22 %" 
+                                        HorizontalAlignment="Right" 
+                                        Margin="0,70,0,0" 
+                                        VerticalAlignment="Top" 
+                                        Background="{x:Null}" 
+                                        Foreground="#FFE8E8E8" 
+                                        FontFamily="Segoe UI Semibold"/>
+
+
+
+                    </Grid>
+
+
+                    <Grid x:Name="JitterGrid" 
+                          HorizontalAlignment="Center" 
+                          VerticalAlignment="Top" 
+                          Width="290" 
+                          Margin="70,45,0,0">
+
+                        <Rectangle 
+                                x:Name = "RightButtonJitterRectangle"
+                                HorizontalAlignment="Left" 
+                                Height="24" 
+                                VerticalAlignment="Top" 
+                                Width="53" 
+                                Fill="#FF9B00"
+                                ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                ToolTipService.Placement="Right"/>
+
+                        <Label 
+                                x:Name="JitterLabel"
+                                Content="JITTER" 
+                                HorizontalAlignment="Left" 
+                                Margin="5,0,0,0" 
+                                VerticalAlignment="Top" 
+                                Background="{x:Null}" 
+                                Foreground="#FF150909" 
+                                FontFamily="Segoe UI Semibold" 
+                                ToolTip="Jitter motion."
+                                FontWeight="Bold"/>
+
+                        <Slider 
+                                x:Name = "RightClickerJitterXAxis"
+                                HorizontalAlignment="Center" 
+                                Margin="0,45,0,0"
+                                VerticalAlignment="Top" 
+                                Width="150" 
+                                Maximum="30"
+                                Minimum="0" Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                Background="#FF1B191B"
+                                BorderBrush="#FF2F2C2F"
+                                Foreground="#FF9B00"/>
+
+                        <Label 
+                                Content="X-Axis" 
+                                HorizontalAlignment="Left" 
+                                Margin="0,40,0,0"
+                                VerticalAlignment="Top"
+                                Background="{x:Null}" 
+                                Foreground="#DDFFFFFF" 
+                                FontFamily="Segoe UI"/>
+
+                        <Label 
+                                x:Name="RightXAxisText"
+                                Content="0 SHIFT" 
+                                HorizontalAlignment="Right" 
+                                Margin="0,40,0,0" 
+                                VerticalAlignment="Top" 
+                                Background="{x:Null}" 
+                                Foreground="#FFE8E8E8" 
+                                FontFamily="Segoe UI Semibold"/>
+
+                        <Label 
+                                Content="Y-Axis" 
+                                HorizontalAlignment="Left" 
+                                Margin="0,70,0,0" 
+                                VerticalAlignment="Top" 
+                                Background="{x:Null}" 
+                                Foreground="#DDFFFFFF" 
+                                FontFamily="Segoe UI"/>
+
+                        <Slider 
+                                x:Name = "RightClickerJitterYAxis" 
+                                HorizontalAlignment="Center" 
+                                Margin="0,75,0,0" 
+                                VerticalAlignment="Top" 
+                                Width="150" 
+                                Maximum="30"
+                                Minimum="0" Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                Background="#FF1B191B"
+                                BorderBrush="#FF2F2C2F"
+                                Foreground="#FF9B00"/>
+
+                        <Label 
+                                x:Name="RightYAxisText"
+                                Content="0 SHIFT" 
+                                HorizontalAlignment="Right" 
+                                Margin="0,70,0,0" 
+                                VerticalAlignment="Top" 
+                                Background="{x:Null}" 
+                                Foreground="#FFE8E8E8" 
+                                FontFamily="Segoe UI Semibold"/>
+
+                        <CheckBox
+                                x:Name="RightJitterCheckbox"
+                                HorizontalAlignment="Left" 
+                                Margin="70,3,0,0" 
+                                VerticalAlignment="Top"/>
+                    </Grid>
+
+                    <Grid
+                        x:Name="RightCpsDelimiter"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="75, 0, 0, 130"
+                        Width="290">
+
+                        <Rectangle 
+                            x:Name="RightCpsDelimiterRectangle" 
+                            HorizontalAlignment="Left" 
+                            Height="24" 
+                            VerticalAlignment="Top" 
+                            Width="100" 
+                            Fill="#FF9B00"
+                            ToolTip="Allows you to set a maximum number of cps."
+                            ToolTipService.Placement="Right"/>
+
+                        <Label 
+                            x:Name="RightCpsDelimiterLabel"
+                            Content = "CPS DELIMITER"
+                            ToolTip="Set the maximum number of cps (up to 500 cps)"
+                            HorizontalAlignment = "Left"
+                            Margin = "6,0,0,0"
+                            VerticalAlignment = "Top"
+                            Background = "{x:Null}"
+                            Foreground = "#FF150909"
+                            FontFamily = "Segoe UI Semibold"/>
+
+                        <Slider 
+                            x:Name="RightCpsDelimiterSlider" 
+                            Margin="0,45,0,0" 
+                            VerticalAlignment="Top" 
+                            HorizontalAlignment="Left"
+                            Width="190"
+                            TickFrequency="10"
+                            Maximum="500" 
+                            Minimum="30" 
+                            Value="30"
+                            SmallChange="1" 
+                            Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                            Background="#FF1B191B"
+                            BorderBrush="#FF2F2C2F"
+                            Foreground="#FF9B00"/>
+
+                        <Label 
+                            x:Name="RightCpsDelimiterText"
+                            Content="30 MAX CPS" 
+                            HorizontalAlignment="Right" 
+                            Margin="0,40,0,0" 
+                            VerticalAlignment="Top" 
+                            Background="{x:Null}" 
+                            Foreground="#FFE8E8E8" 
+                            FontFamily="Segoe UI Semibold"/>
+
+                    </Grid>
+
+                </Grid>
+
+
+            </TabItem>
+
+            <TabItem Header="LEFT CLICKER">
+
+                <Grid>
+                    <Grid x:Name="BreakBlocksGrid" 
+                          HorizontalAlignment="Right" 
+                          Height="24" 
+                          Margin="0,45,50,0" 
+                          VerticalAlignment="Top" 
+                          Width="240">
+
+                        <CheckBox 
+                            x:Name="BreakBlocksCheckbox"
+                            Content=""
+                            HorizontalAlignment="Left"
+                            Margin="105,0,0,0"
+                            VerticalAlignment="Center"
+                            Foreground="#FFE8E8E8"
+                            Background="#FF9B00"
+                            BorderBrush="#FF9B00"/>
+
+                        <Rectangle 
+                            x:Name="LeftButtonBreakBlocksRectangle" 
+                            HorizontalAlignment="Left" 
+                            Height="24" 
+                            VerticalAlignment="Center" 
+                            Width="100" 
+                            Fill="#FF9B00"
+                            ToolTip="Allows you to break blocks while the left autoclicker is active."
+                            ToolTipService.Placement="Right"/>
+
+                        <Label 
+                                x:Name="BreakBlocksLabel"
+                            Content="BREAK BLOCKS"
+                            HorizontalAlignment="Left"
+                            Margin="5,0,0,0"
+                            VerticalAlignment="Center"
+                            Background="{x:Null}"
+                            Foreground="#FF150909"
+                            FontFamily="Segoe UI Semibold"/>
+
+                    </Grid>
+
+                    <Grid
+                        x:Name="CpsDelimiter"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Margin="0, 0, 50, 162"
+                        Width="240">
+
+                        <Rectangle 
+                            x:Name="CpsDelimiterRectangle" 
+                            HorizontalAlignment="Left" 
+                            Height="24" 
+                            VerticalAlignment="Top" 
+                            Width="100" 
+                            Fill="#FF9B00"
+                            ToolTip="Allows you to set a maximum number of cps."
+                            ToolTipService.Placement="Right"/>
+
+                        <Label 
+                            x:Name="CpsDelimiterLabel"
+                            Content = "CPS DELIMITER"
+                            HorizontalAlignment = "Left"
+                            Margin = "6,0,0,0"
+                            VerticalAlignment = "Top"
+                            Background = "{x:Null}"
+                            Foreground = "#FF150909"
+                            FontFamily = "Segoe UI Semibold"/>
+
+                        <Slider 
+                            x:Name="CpsDelimiterSlider" 
+                            Margin="0,44,0,0" 
+                            VerticalAlignment="Top" 
+                            HorizontalAlignment="Left"
+                            Width="140"
+                            TickFrequency="10"
+                            Maximum="500" 
+                            Minimum="30" 
+                            Value="1.5"
+                            SmallChange="1" 
+                            Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                            Background="#FF1B191B"
+                            BorderBrush="#FF2F2C2F"
+                            Foreground="#FF9B00"/>
+
+                        <Label 
+                            x:Name="CpsDelimiterText"
+                            Content="30 CPS" 
+                            HorizontalAlignment="Right" 
+                            Margin="0,38,0,0" 
+                            VerticalAlignment="Top" 
+                            Background="{x:Null}" 
+                            Foreground="#FFE8E8E8" 
+                            FontFamily="Segoe UI Semibold"/>
+
+
+
+                    </Grid>
+
+                    <Grid x:Name="BlockhitGrid" 
+                          Margin="70,0,0,100" 
+                          Width="290"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center">
+
+                        <Slider 
+                                x:Name="LeftBlockhitProbabilitySlider" 
+                                Minimum="0"
+                                Maximum="100" 
+                                Width="100"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center"
+                                Margin="40,45,38,0" 
+                                Value="25"
+                                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                Background="#FF1B191B"
+                                BorderBrush="#FF2F2C2F"
+                                Foreground="#FF9B00"/>
+
+                        <Slider 
+                                x:Name="BlockhitDelaySlider" 
+                                Minimum="1"
+                                Maximum="1000" 
+                                Width="100"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center"
+                                Margin="40,75,38,0" 
+                                Value="500"
+                                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                Background="#FF1B191B"
+                                BorderBrush="#FF2F2C2F"
+                                Foreground="#FF9B00"/>
+
+                        <Label 
+                                x:Name="BlockhitText"
+                                Content="25 %" 
+                                Background="{x:Null}" 
+                                Foreground="#FFE8E8E8" 
+                                FontFamily="Segoe UI Semibold" 
+                                VerticalAlignment="Top" 
+                                Margin="190,32,0,0" 
+                                HorizontalAlignment="Right"/>
+
+                        <Label 
+                                x:Name="BlockhitDelayText"
+                                Content="500 MS" 
+                                Background="{x:Null}" 
+                                Foreground="#FFE8E8E8" 
+                                FontFamily="Segoe UI Semibold" 
+                                VerticalAlignment="Top" 
+                                Margin="190,60,0,0" 
+                                HorizontalAlignment="Right"/>
+
+                        <Label 
+                                Content="Probability" 
+                                FontFamily="Segoe UI Semilight" 
+                                VerticalAlignment="Top" 
+                                Margin="0,40,0,0" 
+                                HorizontalAlignment="Left"/>
+
+                        <Label 
+                                Content="Delay" 
+                                FontFamily="Segoe UI Semilight" 
+                                VerticalAlignment="Top" 
+                                Margin="0,70,0,0" 
+                                HorizontalAlignment="Left"/>
+
+                        <Rectangle 
+                                x:Name="LeftButtonBlockhitRectangle" 
+                                HorizontalAlignment="Left" 
+                                Height="24" 
+                                VerticalAlignment="Top" 
+                                Width="75" 
+                                Fill="#FF9B00"
+                                ToolTip="Allows you to block the other player's hits."
+                                ToolTipService.Placement="Right"/>
+
+                        <Label
+                                x:Name="BlockhitLabel"
+                                Content="BLOCKHIT"
+                                Background="{x:Null}"
+                                Foreground="#FF150909"
+                                FontFamily="Segoe UI Semibold"
+                                VerticalAlignment="Top"
+                                Margin="4,0,0,0"
+                                HorizontalAlignment="Left"/>
+
+                        <CheckBox
+                x:Name="BlockhitCheckbox"
+                Content="" 
+                HorizontalAlignment="Left" 
+                HorizontalContentAlignment="Center"
+                Margin="90,3,0,0" 
+                VerticalAlignment="Top"/>
+                    </Grid>
+
+                    <Grid x:Name="InventoryGrid" 
+                          HorizontalAlignment="Right" 
+                          Height="62" 
+                          Margin="0,170,50,0" 
+                          VerticalAlignment="Top" 
+                          Width="240">
+
+                        <Label 
+                Content="Wait time" 
+                HorizontalAlignment="Left" 
+                Margin="0,38,0,0" 
+                VerticalAlignment="Top" 
+                Background="{x:Null}" 
+                Foreground="#FFE8E8E8" 
+                FontFamily="Segoe UI Semilight"/>
+
+                        <Slider 
+                x:Name="InventoryDelaySlider" 
+                Margin="76,44,70,0" 
+                VerticalAlignment="Top" 
+                TickFrequency="10"
+                Maximum="5" 
+                Minimum="1" 
+                Value="1.5"
+                SmallChange="1" 
+                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                Background="#FF1B191B"
+                BorderBrush="#FF2F2C2F"
+                Foreground="#FF9B00"/>
+
+                        <Label 
+                x:Name="InventoryDelayText"
+                Content="1.5 SEC" 
+                HorizontalAlignment="Left" 
+                Margin="168,38,0,0" 
+                VerticalAlignment="Top" 
+                Background="{x:Null}" 
+                Foreground="#FFE8E8E8" 
+                FontFamily="Segoe UI Semibold"/>
+                        <CheckBox 
+                x:Name="DisableWhenInventoryOpenCheckbox"
+                Content=""
+                Foreground="#FFE8E8E8"
+                Background="#FF9B00"
+                BorderBrush="#FF9B00" VerticalAlignment="Top" Margin="211,3,0,0" HorizontalAlignment="Left"/>
+                        <Rectangle 
+                                x:Name="LeftButtonInventoryRectangle" 
+                                Height="24" 
+                                Width="206" 
+                                Fill="#FF9B00"
+                                ToolTip="Allows you to temporarily disable the autoclicker while the inventory is open for a certain configurable length of time."
+                                ToolTipService.Placement="Right" 
+                                VerticalAlignment="Top" 
+                                HorizontalAlignment="Left"/>
+                        <Label
+                                x:Name="DisableWhenInventoryLabel"
+                                Content="DISABLE WHEN INVENTORY OPEN"
+                                Background="{x:Null}"
+                                Foreground="#FF150909"
+                                FontFamily="Segoe UI Semibold"
+                                VerticalAlignment="Top" 
+                                Margin="4,0,0,0" 
+                                HorizontalAlignment="Left"/>
+                    </Grid>
+
+                    <Grid x:Name="RefillGrid" 
+                          HorizontalAlignment="Center" 
+                          Width="290"
+                          Margin="70,0,0,70" 
+                          VerticalAlignment="Bottom" >
+
+                        <Slider 
+                x:Name="RefillSpeedSlider"
+                HorizontalAlignment="Center" 
+                Margin="0,45,0,0" 
+                VerticalAlignment="Top"
+                Width="90" 
+                Value="30"
+                Minimum="1"
+                Maximum="100" 
+                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                Background="#FF1B191B"
+                BorderBrush="#FF2F2C2F"
+                Foreground="#FF9B00"/>
+
+                        <Label 
+                x:Name="RefillText"
+                Content="30 VELOCITY" 
+                HorizontalAlignment="Right" 
+                Margin="0,40,0,0" 
+                VerticalAlignment="Top" 
+                Background="{x:Null}" 
+                Foreground="#FFE8E8E8" 
+                FontFamily="Segoe UI Semibold"/>
+
+                        <Label 
+                Content="Mouse Speed"
+                HorizontalAlignment="Left"
+                Margin="0,40,0,0"
+                VerticalAlignment="Top"
+                FontFamily="Segoe UI Semilight"/>
+
+                        <Label 
+                Content="X-Axis"
+                HorizontalAlignment="Left"
+                Margin="2,70,0,0"
+                VerticalAlignment="Top"
+                FontFamily="Segoe UI Semilight"/>
+
+                        <Slider 
+                x:Name="RefillXAxisRandomSlider"
+                HorizontalAlignment="Center" 
+                Margin="0,75,0,0" 
+                VerticalAlignment="Top"
+                Width="90" 
+                Value="5.7"
+                Minimum="1"
+                Maximum="100" 
+                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                Background="#FF1B191B"
+                BorderBrush="#FF2F2C2F"
+                Foreground="#FF9B00"/>
+
+                        <Label
+                x:Name="RefillXAxisText"
+                Content="5.7 SHIFT" 
+                HorizontalAlignment="Right" 
+                Margin="0,70,0,0" 
+                VerticalAlignment="Top" 
+                Background="{x:Null}" 
+                Foreground="#FFE8E8E8" 
+                FontFamily="Segoe UI Semibold"/>
+
+                        <Slider 
+                x:Name="RefillYAxisRandomSlider"
+                HorizontalAlignment="Center" 
+                Margin="0,105,0,0" 
+                VerticalAlignment="Top"
+                Width="90" 
+                Maximum="100"
+                Minimum="1"
+                Value="5" 
+                Style="{DynamicResource FlatSlider}"
+                Background="#FF1B191B"
+                BorderBrush="#FF2F2C2F"
+                Foreground="#FF9B00"/>
+
+                        <CheckBox
+                x:Name="RefillSpeedCheckbox"
+                HorizontalAlignment="Left"
+                Margin="67,3,0,0"
+                VerticalAlignment="Top"/>
+
+                        <Label 
+                x:Name="RefillYAxisText"
+                Content="5 SHIFT" 
+                HorizontalAlignment="Right" 
+                Margin="0,100,0,0" 
+                VerticalAlignment="Top" 
+                Background="{x:Null}" 
+                Foreground="#FFE8E8E8" 
+                FontFamily="Segoe UI Semibold"/>
+
+                        <Label
+                Content="Y-Axis"
+                HorizontalAlignment="Left"
+                Margin="2,100,0,0"
+                VerticalAlignment="Top"
+                FontFamily="Segoe UI Semilight"/>
+
+                        <Label
+                Content="Steps"
+                HorizontalAlignment="Left"
+                Margin="2,130,0,0"
+                VerticalAlignment="Top"
+                FontFamily="Segoe UI Semilight"/>
+
+                        <Slider 
+                x:Name="RefillStepsRandomSlider"
+                HorizontalAlignment="Center" 
+                Margin="0,135,0,0" 
+                VerticalAlignment="Top"
+                Width="90" 
+                Maximum="100"
+                Minimum="1"
+                Value="60" Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                Background="#FF1B191B"
+                BorderBrush="#FF2F2C2F"
+                Foreground="#FF9B00"/>
+
+                        <Label 
+                x:Name="RefillStepsText"
+                Content="60 STEPS" 
+                HorizontalAlignment="Right" 
+                Margin="0,130,0,0" 
+                VerticalAlignment="Top" 
+                Background="{x:Null}" 
+                Foreground="#FFE8E8E8" 
+                FontFamily="Segoe UI Semibold"/>
+
+                        <Rectangle 
+                x:Name="LeftButtonRefillRectangle" 
+                HorizontalAlignment="Left" 
+                Height="24" 
+                Margin="1,0,0,0" 
+                VerticalAlignment="Top" 
+                Width="53" 
+                Fill="#FF9B00"
+                ToolTip="As long as the left mouse button and the LShift key are pressed, it automatically refills the inventory."
+                ToolTipService.Placement="Right"/>
+
+                        <Label
+                                x:Name="RefillLabel"
+                Content="REFILL" 
+                Background="{x:Null}"
+                Foreground="#FF150909" 
+                FontFamily="Segoe UI Semibold" 
+                VerticalAlignment="Top" 
+                Margin="5,0,0,0" 
+                HorizontalAlignment="Left"/>
+
+                    </Grid>
+
+                    <Grid x:Name="LeftClickerMainGrid" 
+                          HorizontalAlignment="Left" 
+                          VerticalAlignment="Top" 
+                          Margin="65,45,0,0"
+                          Width="290">
+
+                        <Rectangle 
+                                x:Name="LeftButtonRectangle" 
+                                HorizontalAlignment="Left" 
+                                Height="24" 
+                                VerticalAlignment="Top" 
+                                Width="94" 
+                                Fill="#FF9B00"
+                                ToolTip="Left Mouse Button AutoClicker."
+                                ToolTipService.Placement="Right"/>
+
+
+                        <Label 
+                                x:Name="LeftButtonLabel"
+                                Content = "LEFT BUTTON"
+                                HorizontalAlignment = "Left"
+                                Margin = "5,0,0,0"
+                                VerticalAlignment = "Top"
+                                Background = "{x:Null}"
+                                Foreground = "#FF150909"
+                                FontFamily = "Segoe UI Semibold"/>
+
+                        <Label
+                                Content="Clicks per second"
+                                HorizontalAlignment="Left"
+                                Margin="0,40,0,0"
+                                VerticalAlignment="Top"
+                                FontFamily="Segoe UI Semilight"/>
+
+                        <Slider
+                                x:Name = "LeftCpsSlider"
+                                HorizontalAlignment="Center"
+                                Margin="50,45,0,0"
+                                VerticalAlignment="Top"
+                                Width="120"
+                                Value="10"
+                                Minimum="5"
+                                Maximum="30" 
+                                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                Background="#FF1B191B"
+                                BorderBrush="#FF2F2C2F"
+                                Foreground="#FF9B00"/>
+
+                        <Label 
+                                x:Name = "CpsText"
+                                FontSize="11"
+                                Content="10 CPS"
+                                HorizontalAlignment="Right"
+                                Margin="180,40,0,0"
+                                VerticalAlignment="Top"
+                                Background="{x:Null}"
+                                Foreground="#FFE3E3E3"
+                                FontFamily="Segoe UI Semibold"/>
+
+                        <Button 
+                                x:Name="LeftClickerKeyBindButton"
+                                HorizontalAlignment="Right"
+                                Margin="0,0,0,0"
+                                VerticalAlignment="Top"
+                                Width="76" 
+                                Height="24" 
+                                Content="BIND A KEY" 
+                                FontSize="8" 
+                                Background="#FF9B00" 
+                                BorderBrush="{x:Null}" />
+
+                        <CheckBox
+                                x:Name="LeftClickerCheckbox"
+                                Content="" 
+                                HorizontalAlignment="Left" 
+                                Margin="103,2,0,0" 
+                                VerticalAlignment="Top"/>
+                    </Grid>
+
+                    <Grid x:Name="LeftClickerBoundsGrid" 
+                              HorizontalAlignment="Left" 
+                              VerticalAlignment="Center" 
+                              Width="290"
+                              Margin="65,0,0,100">
+
+                        <Rectangle 
+                                        x:Name="LeftButtonBoundRectangle" 
+                                        HorizontalAlignment="Left" 
+                                        Height="24" 
+                                        VerticalAlignment="Top" 
+                                        Width="69" 
+                                        Fill="#FF9B00"
+                                        ToolTipService.Placement="Right"
+                                        Margin="0,0,0,0"/>
+
+                        <Label 
+                                        x:Name="BoundsLabel"
+                                        Content = "BOUNDS"
+                                        HorizontalAlignment = "Left"
+                                        Margin = "6,0,0,0"
+                                        VerticalAlignment = "Top"
+                                        Background = "{x:Null}"
+                                        Foreground = "#FF150909"
+                                        ToolTip="Set the maximum and minimum cps values."
+                                        FontFamily = "Segoe UI Semibold"/>
+
+                        <Slider
+                                        x:Name = "LeftLowerCpsSlider"
+                                        HorizontalAlignment="Center"
+                                        Margin="0,45,0,0"
+                                        VerticalAlignment="Top"
+                                        Width="100"
+                                        Minimum="0"
+                                        Maximum="9" 
+                                        Value="3"
+                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                        Background="#FF1B191B"
+                                        BorderBrush="#FF2F2C2F"
+                                        Foreground="#FF9B00"/>
+
+                        <Label
+                                        Content="Lower Bound"
+                                        HorizontalAlignment="Left"
+                                        Margin="0,40,0,0"
+                                        VerticalAlignment="Top"
+                                        ToolTip="Tip: For smaller values, use the arrow keys to increase the slider."
+                                        FontFamily="Segoe UI Semilight"/>
+
+                        <Label
+                                        Content="Upper Bound"
+                                        HorizontalAlignment="Left"
+                                        Margin="0,70,0,0"
+                                        VerticalAlignment="Top"
+                                        ToolTip="Tip: For smaller values, use the arrow keys to increase the slider."
+                                        FontFamily="Segoe UI Semilight"/>
+
+                        <Slider
+                                        x:Name = "LeftUpperCpsSlider"
+                                        HorizontalAlignment="Center"
+                                        Margin="0,75,0,0"
+                                        VerticalAlignment="Top"
+                                        Width="100"
+                                        Maximum="20"
+                                        Minimum="0"
+                                        Value="1.5"
+                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                        Background="#FF1B191B"
+                                        BorderBrush="#FF2F2C2F"
+                                        Foreground="#FF9B00"/>
+
+                        <Label 
+                                        x:Name = "UpperCpsText"
+                                        FontSize="11"
+                                        Content="1.5 MORE CPS"
+                                        HorizontalAlignment="Right"
+                                        Margin="162,70,0,0"
+                                        VerticalAlignment="Top"
+                                        Background="{x:Null}"
+                                        Foreground="#FFE3E3E3"
+                                        FontFamily="Segoe UI Semibold"/>
+
+                        <Label 
+                                        x:Name = "LowerCpsText"
+                                        FontSize="11"
+                                        Content="3.0 LESS CPS"
+                                        HorizontalAlignment="Right"
+                                        Margin="162,40,0,0"
+                                        VerticalAlignment="Top"
+                                        Background="{x:Null}"
+                                        Foreground="#FFE3E3E3"
+                                        FontFamily="Segoe UI Semibold"/>
+                    </Grid>
+
+                    <Grid x:Name="LeftClickerCpsDropGrid"
+                              HorizontalAlignment="Left"
+                              VerticalAlignment="Bottom"
+                              Width="290"
+                              Margin="65, 0, 0, 130">
+
+
+                        <Rectangle 
+                                        x:Name="LeftButtonCpsDropRectangle" 
+                                        HorizontalAlignment="Left" 
+                                        Height="24" 
+                                        Margin="0,0,0,0" 
+                                        VerticalAlignment="Top" 
+                                        Width="75" 
+                                        Fill="#FF9B00"
+                                        ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                        ToolTipService.Placement="Right"/>
+
+                        <Label
+                                        x:Name="LeftCpsDropLabel"
+                                        Content="CPS DROP"
+                                        HorizontalAlignment="Left"
+                                        Margin="7,0,0,0"
+                                        VerticalAlignment="Top"
+                                        Background="{x:Null}"
+                                        Foreground="#FF150909"
+                                        FontFamily="Segoe UI Semibold"/>
+
+                        <Label 
+                                        Content="Amount" 
+                                        FontFamily="Segoe UI Semilight" 
+                                        VerticalAlignment="Top" 
+                                        Margin="0,40,0,0" 
+                                        HorizontalAlignment="Left"/>
+
+                        <Slider 
+                                        x:Name="LeftCpsDropAmountSlider" 
+                                        Margin="0,45,0,0" 
+                                        VerticalAlignment="Top" 
+                                        Maximum="30"
+                                        HorizontalAlignment="Center" 
+                                        Width="100" 
+                                        Value="2.5"
+                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                        Background="#FF1B191B"
+                                        BorderBrush="#FF2F2C2F"
+                                        Foreground="#FF9B00"/>
+
+                        <Label 
+                                        x:Name="CpsDropAmountText"
+                                        Content="2.5 CPS" 
+                                        HorizontalAlignment="Right" 
+                                        Margin="0,40,0,0" 
+                                        VerticalAlignment="Top" 
+                                        Background="{x:Null}" 
+                                        Foreground="#FFE8E8E8" 
+                                        FontFamily="Segoe UI Semibold"/>
+
+                        <Label 
+                                        Content="Probability" 
+                                        HorizontalAlignment="Left" 
+                                        Margin="0,70,0,0" 
+                                        VerticalAlignment="Top" 
+                                        FontFamily="Segoe UI Semilight"/>
+
+                        <Slider 
+                                        x:Name="LeftCpsDropProbabilitySlider"
+                                        HorizontalAlignment="Center" 
+                                        Margin="0,75,0,0" 
+                                        VerticalAlignment="Top"
+                                        Width="100" 
+                                        Minimum="0"
+                                        Maximum="100" 
+                                        Value="22"
+                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                        Background="#FF1B191B"
+                                        BorderBrush="#FF2F2C2F"
+                                        Foreground="#FF9B00"/>
+
+                        <Label 
+                                        x:Name="CpsDropProbabilityText"
+                                        Content="22 %" 
+                                        HorizontalAlignment="Right" 
+                                        Margin="0,70,0,0" 
+                                        VerticalAlignment="Top" 
+                                        Background="{x:Null}" 
+                                        Foreground="#FFE8E8E8" 
+                                        FontFamily="Segoe UI Semibold"/>
+
+
+
+                    </Grid>
+
+
+                    <Grid x:Name="LeftJitterGrid" 
+                          HorizontalAlignment="Center" 
+                          VerticalAlignment="Top" 
+                          Width="290"
+                          Margin="70,45,0,0">
+
+                        <Rectangle 
+                                x:Name="LeftButtonJitterRectangle"
+                                HorizontalAlignment="Left" 
+                                Height="24" 
+                                VerticalAlignment="Top" 
+                                Width="53" 
+                                Fill="#FF9B00"
+                                ToolTip="LEFT MOUSE BUTTON CLICKER."
+                                ToolTipService.Placement="Right"/>
+
+                        <Label 
+                                x:Name="LeftJitterLabel"
+                                Content="JITTER" 
+                                HorizontalAlignment="Left" 
+                                Margin="5,0,0,0" 
+                                VerticalAlignment="Top" 
+                                Background="{x:Null}" 
+                                Foreground="#FF150909" 
+                                FontFamily="Segoe UI Semibold" 
+                                FontWeight="Bold"/>
+
+                        <Slider 
+                                x:Name = "LeftJitterXAxis"
+                                HorizontalAlignment="Center" 
+                                Margin="0,45,0,0"
+                                VerticalAlignment="Top" 
+                                Width="76" 
+                                Value="5"
+                                Maximum="30"
+                                Minimum="0" Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                                Background="#FF1B191B"
+                                BorderBrush="#FF2F2C2F"
+                                Foreground="#FF9B00"/>
+
+                        <Label 
+                Content="X Axis" 
+                HorizontalAlignment="Left" 
+                Margin="0,40,0,0"
+                VerticalAlignment="Top"
+                Background="{x:Null}" 
+                Foreground="#DDFFFFFF" 
+                FontFamily="Segoe UI"/>
+
+                        <Label 
+                x:Name="XAxisText"
+                Content="5 SHIFT" 
+                HorizontalAlignment="Right" 
+                Margin="0,40,0,0" 
+                VerticalAlignment="Top" 
+                Background="{x:Null}" 
+                Foreground="#FFE8E8E8" 
+                FontFamily="Segoe UI Semibold"/>
+
+                        <Label 
+                Content="Y Axis" 
+                HorizontalAlignment="Left" 
+                Margin="1,70,0,0" 
+                VerticalAlignment="Top" 
+                Background="{x:Null}" 
+                Foreground="#DDFFFFFF" 
+                FontFamily="Segoe UI"/>
+
+                        <Slider 
+                x:Name = "LeftJitterYAxis" 
+                HorizontalAlignment="Center" 
+                Margin="0,75,0,0" 
+                VerticalAlignment="Top" 
+                Width="76" 
+                Value="3"
+                Maximum="30"
+                Minimum="0" Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
+                Background="#FF1B191B"
+                BorderBrush="#FF2F2C2F"
+                Foreground="#FF9B00"/>
+
+                        <Label 
+                x:Name="YAxisText"
+                Content="3 SHIFT" 
+                HorizontalAlignment="Right" 
+                Margin="0,70,0,0" 
+                VerticalAlignment="Top" 
+                Background="{x:Null}" 
+                Foreground="#FFE8E8E8" 
+                FontFamily="Segoe UI Semibold"/>
+
+                        <CheckBox
+                x:Name="JitterCheckbox"
+                Content="" 
+                HorizontalAlignment="Left" 
+                HorizontalContentAlignment="Center"
+                Margin="70,3,0,0" 
+                VerticalAlignment="Top"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+
             <TabItem Header="SETTINGS">
 
                 <Grid>
@@ -801,1106 +2018,6 @@
                     </Grid>
 
                 </Grid>
-
-            </TabItem>
-
-            <TabItem Header="LEFT CLICKER">
-
-                <Grid>
-                    <Grid x:Name="BreakBlocksGrid" 
-                          HorizontalAlignment="Right" 
-                          Height="24" 
-                          Margin="0,45,50,0" 
-                          VerticalAlignment="Top" 
-                          Width="240">
-
-                        <CheckBox 
-                            x:Name="BreakBlocksCheckbox"
-                            Content=""
-                            HorizontalAlignment="Left"
-                            Margin="105,0,0,0"
-                            VerticalAlignment="Center"
-                            Foreground="#FFE8E8E8"
-                            Background="#FF9B00"
-                            BorderBrush="#FF9B00"/>
-
-                        <Rectangle 
-                            x:Name="LeftButtonBreakBlocksRectangle" 
-                            HorizontalAlignment="Left" 
-                            Height="24" 
-                            VerticalAlignment="Center" 
-                            Width="100" 
-                            Fill="#FF9B00"
-                            ToolTip="Allows you to break blocks while the left autoclicker is active."
-                            ToolTipService.Placement="Right"/>
-
-                        <Label 
-                                x:Name="BreakBlocksLabel"
-                            Content="BREAK BLOCKS"
-                            HorizontalAlignment="Left"
-                            Margin="5,0,0,0"
-                            VerticalAlignment="Center"
-                            Background="{x:Null}"
-                            Foreground="#FF150909"
-                            FontFamily="Segoe UI Semibold"/>
-
-                    </Grid>
-
-                    <Grid x:Name="BlockhitGrid" 
-                          Margin="70,0,0,100" 
-                          Width="290"
-                          VerticalAlignment="Center"
-                          HorizontalAlignment="Center">
-
-                        <Slider 
-                                x:Name="LeftBlockhitProbabilitySlider" 
-                                Minimum="0"
-                                Maximum="100" 
-                                Width="100"
-                                VerticalAlignment="Top"
-                                HorizontalAlignment="Center"
-                                Margin="40,45,38,0" 
-                                Value="25"
-                                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                Background="#FF1B191B"
-                                BorderBrush="#FF2F2C2F"
-                                Foreground="#FF9B00"/>
-
-                        <Slider 
-                                x:Name="BlockhitDelaySlider" 
-                                Minimum="1"
-                                Maximum="1000" 
-                                Width="100"
-                                VerticalAlignment="Top"
-                                HorizontalAlignment="Center"
-                                Margin="40,75,38,0" 
-                                Value="500"
-                                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                Background="#FF1B191B"
-                                BorderBrush="#FF2F2C2F"
-                                Foreground="#FF9B00"/>
-
-                        <Label 
-                                x:Name="BlockhitText"
-                                Content="25 %" 
-                                Background="{x:Null}" 
-                                Foreground="#FFE8E8E8" 
-                                FontFamily="Segoe UI Semibold" 
-                                VerticalAlignment="Top" 
-                                Margin="190,32,0,0" 
-                                HorizontalAlignment="Right"/>
-
-                        <Label 
-                                x:Name="BlockhitDelayText"
-                                Content="500 MS" 
-                                Background="{x:Null}" 
-                                Foreground="#FFE8E8E8" 
-                                FontFamily="Segoe UI Semibold" 
-                                VerticalAlignment="Top" 
-                                Margin="190,60,0,0" 
-                                HorizontalAlignment="Right"/>
-
-                        <Label 
-                                Content="Probability" 
-                                FontFamily="Segoe UI Semilight" 
-                                VerticalAlignment="Top" 
-                                Margin="0,40,0,0" 
-                                HorizontalAlignment="Left"/>
-
-                        <Label 
-                                Content="Delay" 
-                                FontFamily="Segoe UI Semilight" 
-                                VerticalAlignment="Top" 
-                                Margin="0,70,0,0" 
-                                HorizontalAlignment="Left"/>
-
-                        <Rectangle 
-                                x:Name="LeftButtonBlockhitRectangle" 
-                                HorizontalAlignment="Left" 
-                                Height="24" 
-                                VerticalAlignment="Top" 
-                                Width="75" 
-                                Fill="#FF9B00"
-                                ToolTip="Allows you to block the other player's hits."
-                                ToolTipService.Placement="Right"/>
-
-                        <Label
-                                x:Name="BlockhitLabel"
-                                Content="BLOCKHIT"
-                                Background="{x:Null}"
-                                Foreground="#FF150909"
-                                FontFamily="Segoe UI Semibold"
-                                VerticalAlignment="Top"
-                                Margin="4,0,0,0"
-                                HorizontalAlignment="Left"/>
-
-                        <CheckBox
-                x:Name="BlockhitCheckbox"
-                Content="" 
-                HorizontalAlignment="Left" 
-                HorizontalContentAlignment="Center"
-                Margin="90,3,0,0" 
-                VerticalAlignment="Top"/>
-                    </Grid>
-
-                    <Grid x:Name="InventoryGrid" 
-                          HorizontalAlignment="Right" 
-                          Height="62" 
-                          Margin="0,88,50,0" 
-                          VerticalAlignment="Top" 
-                          Width="240">
-
-                        <Label 
-                Content="Wait time" 
-                HorizontalAlignment="Left" 
-                Margin="0,38,0,0" 
-                VerticalAlignment="Top" 
-                Background="{x:Null}" 
-                Foreground="#FFE8E8E8" 
-                FontFamily="Segoe UI Semilight"/>
-
-                        <Slider 
-                x:Name="InventoryDelaySlider" 
-                Margin="76,44,70,0" 
-                VerticalAlignment="Top" 
-                TickFrequency="10"
-                Maximum="5" 
-                Minimum="1" 
-                Value="1.5"
-                SmallChange="1" 
-                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                Background="#FF1B191B"
-                BorderBrush="#FF2F2C2F"
-                Foreground="#FF9B00"/>
-
-                        <Label 
-                x:Name="InventoryDelayText"
-                Content="1.5 SEC" 
-                HorizontalAlignment="Left" 
-                Margin="168,38,0,0" 
-                VerticalAlignment="Top" 
-                Background="{x:Null}" 
-                Foreground="#FFE8E8E8" 
-                FontFamily="Segoe UI Semibold"/>
-                        <CheckBox 
-                x:Name="DisableWhenInventoryOpenCheckbox"
-                Content=""
-                Foreground="#FFE8E8E8"
-                Background="#FF9B00"
-                BorderBrush="#FF9B00" VerticalAlignment="Top" Margin="211,3,0,0" HorizontalAlignment="Left"/>
-                        <Rectangle 
-                                x:Name="LeftButtonInventoryRectangle" 
-                                Height="24" 
-                                Width="206" 
-                                Fill="#FF9B00"
-                                ToolTip="Allows you to temporarily disable the autoclicker while the inventory is open for a certain configurable length of time."
-                                ToolTipService.Placement="Right" 
-                                VerticalAlignment="Top" 
-                                HorizontalAlignment="Left"/>
-                        <Label
-                                x:Name="DisableWhenInventoryLabel"
-                                Content="DISABLE WHEN INVENTORY OPEN"
-                                Background="{x:Null}"
-                                Foreground="#FF150909"
-                                FontFamily="Segoe UI Semibold"
-                                VerticalAlignment="Top" 
-                                Margin="4,0,0,0" 
-                                HorizontalAlignment="Left"/>
-                    </Grid>
-
-                    <Grid x:Name="RefillGrid" 
-                          HorizontalAlignment="Center" 
-                          Width="290"
-                          Margin="70,0,0,70" 
-                          VerticalAlignment="Bottom" >
-
-                        <Slider 
-                x:Name="RefillSpeedSlider"
-                HorizontalAlignment="Center" 
-                Margin="0,45,0,0" 
-                VerticalAlignment="Top"
-                Width="90" 
-                Value="30"
-                Minimum="1"
-                Maximum="100" 
-                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                Background="#FF1B191B"
-                BorderBrush="#FF2F2C2F"
-                Foreground="#FF9B00"/>
-
-                        <Label 
-                x:Name="RefillText"
-                Content="30 VELOCITY" 
-                HorizontalAlignment="Right" 
-                Margin="0,40,0,0" 
-                VerticalAlignment="Top" 
-                Background="{x:Null}" 
-                Foreground="#FFE8E8E8" 
-                FontFamily="Segoe UI Semibold"/>
-
-                        <Label 
-                Content="Mouse Speed"
-                HorizontalAlignment="Left"
-                Margin="0,40,0,0"
-                VerticalAlignment="Top"
-                FontFamily="Segoe UI Semilight"/>
-
-                        <Label 
-                Content="X-Axis"
-                HorizontalAlignment="Left"
-                Margin="2,70,0,0"
-                VerticalAlignment="Top"
-                FontFamily="Segoe UI Semilight"/>
-
-                        <Slider 
-                x:Name="RefillXAxisRandomSlider"
-                HorizontalAlignment="Center" 
-                Margin="0,75,0,0" 
-                VerticalAlignment="Top"
-                Width="90" 
-                Value="5.7"
-                Minimum="1"
-                Maximum="100" 
-                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                Background="#FF1B191B"
-                BorderBrush="#FF2F2C2F"
-                Foreground="#FF9B00"/>
-
-                        <Label
-                x:Name="RefillXAxisText"
-                Content="5.7 SHIFT" 
-                HorizontalAlignment="Right" 
-                Margin="0,70,0,0" 
-                VerticalAlignment="Top" 
-                Background="{x:Null}" 
-                Foreground="#FFE8E8E8" 
-                FontFamily="Segoe UI Semibold"/>
-
-                        <Slider 
-                x:Name="RefillYAxisRandomSlider"
-                HorizontalAlignment="Center" 
-                Margin="0,105,0,0" 
-                VerticalAlignment="Top"
-                Width="90" 
-                Maximum="100"
-                Minimum="1"
-                Value="5" 
-                Style="{DynamicResource FlatSlider}"
-                Background="#FF1B191B"
-                BorderBrush="#FF2F2C2F"
-                Foreground="#FF9B00"/>
-
-                        <CheckBox
-                x:Name="RefillSpeedCheckbox"
-                HorizontalAlignment="Left"
-                Margin="67,3,0,0"
-                VerticalAlignment="Top"/>
-
-                        <Label 
-                x:Name="RefillYAxisText"
-                Content="5 SHIFT" 
-                HorizontalAlignment="Right" 
-                Margin="0,100,0,0" 
-                VerticalAlignment="Top" 
-                Background="{x:Null}" 
-                Foreground="#FFE8E8E8" 
-                FontFamily="Segoe UI Semibold"/>
-
-                        <Label
-                Content="Y-Axis"
-                HorizontalAlignment="Left"
-                Margin="2,100,0,0"
-                VerticalAlignment="Top"
-                FontFamily="Segoe UI Semilight"/>
-
-                        <Label
-                Content="Steps"
-                HorizontalAlignment="Left"
-                Margin="2,130,0,0"
-                VerticalAlignment="Top"
-                FontFamily="Segoe UI Semilight"/>
-
-                        <Slider 
-                x:Name="RefillStepsRandomSlider"
-                HorizontalAlignment="Center" 
-                Margin="0,135,0,0" 
-                VerticalAlignment="Top"
-                Width="90" 
-                Maximum="100"
-                Minimum="1"
-                Value="60" Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                Background="#FF1B191B"
-                BorderBrush="#FF2F2C2F"
-                Foreground="#FF9B00"/>
-
-                        <Label 
-                x:Name="RefillStepsText"
-                Content="60 STEPS" 
-                HorizontalAlignment="Right" 
-                Margin="0,130,0,0" 
-                VerticalAlignment="Top" 
-                Background="{x:Null}" 
-                Foreground="#FFE8E8E8" 
-                FontFamily="Segoe UI Semibold"/>
-
-                        <Rectangle 
-                x:Name="LeftButtonRefillRectangle" 
-                HorizontalAlignment="Left" 
-                Height="24" 
-                Margin="1,0,0,0" 
-                VerticalAlignment="Top" 
-                Width="53" 
-                Fill="#FF9B00"
-                ToolTip="As long as the left mouse button and the LShift key are pressed, it automatically refills the inventory."
-                ToolTipService.Placement="Right"/>
-
-                        <Label
-                                x:Name="RefillLabel"
-                Content="REFILL" 
-                Background="{x:Null}"
-                Foreground="#FF150909" 
-                FontFamily="Segoe UI Semibold" 
-                VerticalAlignment="Top" 
-                Margin="5,0,0,0" 
-                HorizontalAlignment="Left"/>
-
-                    </Grid>
-
-                    <Grid x:Name="LeftClickerMainGrid" 
-                          HorizontalAlignment="Left" 
-                          VerticalAlignment="Top" 
-                          Margin="65,45,0,0"
-                          Width="290">
-
-                        <Rectangle 
-                                x:Name="LeftButtonRectangle" 
-                                HorizontalAlignment="Left" 
-                                Height="24" 
-                                VerticalAlignment="Top" 
-                                Width="94" 
-                                Fill="#FF9B00"
-                                ToolTip="Left Mouse Button AutoClicker."
-                                ToolTipService.Placement="Right"/>
-
-
-                        <Label 
-                                x:Name="LeftButtonLabel"
-                                Content = "LEFT BUTTON"
-                                HorizontalAlignment = "Left"
-                                Margin = "5,0,0,0"
-                                VerticalAlignment = "Top"
-                                Background = "{x:Null}"
-                                Foreground = "#FF150909"
-                                FontFamily = "Segoe UI Semibold"/>
-
-                        <Label
-                                Content="Clicks per second"
-                                HorizontalAlignment="Left"
-                                Margin="0,40,0,0"
-                                VerticalAlignment="Top"
-                                FontFamily="Segoe UI Semilight"/>
-
-                        <Slider
-                                x:Name = "LeftCpsSlider"
-                                HorizontalAlignment="Center"
-                                Margin="50,45,0,0"
-                                VerticalAlignment="Top"
-                                Width="120"
-                                Value="10"
-                                Minimum="5"
-                                Maximum="500" 
-                                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                Background="#FF1B191B"
-                                BorderBrush="#FF2F2C2F"
-                                Foreground="#FF9B00"/>
-
-                        <Label 
-                                x:Name = "CpsText"
-                                FontSize="11"
-                                Content="10 CPS"
-                                HorizontalAlignment="Right"
-                                Margin="180,40,0,0"
-                                VerticalAlignment="Top"
-                                Background="{x:Null}"
-                                Foreground="#FFE3E3E3"
-                                FontFamily="Segoe UI Semibold"/>
-
-                        <Button 
-                                x:Name="LeftClickerKeyBindButton"
-                                HorizontalAlignment="Right"
-                                Margin="0,0,0,0"
-                                VerticalAlignment="Top"
-                                Width="76" 
-                                Height="24" 
-                                Content="BIND A KEY" 
-                                FontSize="8" 
-                                Background="#FF9B00" 
-                                BorderBrush="{x:Null}" />
-
-                        <CheckBox
-                                x:Name="LeftClickerCheckbox"
-                                Content="" 
-                                HorizontalAlignment="Left" 
-                                Margin="103,2,0,0" 
-                                VerticalAlignment="Top"/>
-                    </Grid>
-
-                    <Grid x:Name="LeftClickerBoundsGrid" 
-                              HorizontalAlignment="Left" 
-                              VerticalAlignment="Center" 
-                              Width="290"
-                              Margin="65,0,0,100">
-
-                        <Rectangle 
-                                        x:Name="LeftButtonBoundRectangle" 
-                                        HorizontalAlignment="Left" 
-                                        Height="24" 
-                                        VerticalAlignment="Top" 
-                                        Width="69" 
-                                        Fill="#FF9B00"
-                                        ToolTip="LEFT MOUSE BUTTON CLICKER."
-                                        ToolTipService.Placement="Right"
-                                        Margin="0,0,0,0"/>
-
-                        <Label 
-                                        x:Name="BoundsLabel"
-                                        Content = "BOUNDS"
-                                        HorizontalAlignment = "Left"
-                                        Margin = "6,0,0,0"
-                                        VerticalAlignment = "Top"
-                                        Background = "{x:Null}"
-                                        Foreground = "#FF150909"
-                                        FontFamily = "Segoe UI Semibold"/>
-
-                        <Slider
-                                        x:Name = "LeftLowerCpsSlider"
-                                        HorizontalAlignment="Center"
-                                        Margin="0,45,0,0"
-                                        VerticalAlignment="Top"
-                                        Width="100"
-                                        Minimum="0"
-                                        Maximum="9" 
-                                        Value="3"
-                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                        Background="#FF1B191B"
-                                        BorderBrush="#FF2F2C2F"
-                                        Foreground="#FF9B00"/>
-
-                        <Label
-                                        Content="Lower Bound"
-                                        HorizontalAlignment="Left"
-                                        Margin="0,40,0,0"
-                                        VerticalAlignment="Top"
-                                        FontFamily="Segoe UI Semilight"/>
-
-                        <Label
-                                        Content="Upper Bound"
-                                        HorizontalAlignment="Left"
-                                        Margin="0,70,0,0"
-                                        VerticalAlignment="Top"
-                                        FontFamily="Segoe UI Semilight"/>
-
-                        <Slider
-                                        x:Name = "LeftUpperCpsSlider"
-                                        HorizontalAlignment="Center"
-                                        Margin="0,75,0,0"
-                                        VerticalAlignment="Top"
-                                        Width="100"
-                                        Maximum="20"
-                                        Minimum="0"
-                                        Value="1.5"
-                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                        Background="#FF1B191B"
-                                        BorderBrush="#FF2F2C2F"
-                                        Foreground="#FF9B00"/>
-
-                        <Label 
-                                        x:Name = "UpperCpsText"
-                                        FontSize="11"
-                                        Content="1.5 MORE CPS"
-                                        HorizontalAlignment="Right"
-                                        Margin="162,70,0,0"
-                                        VerticalAlignment="Top"
-                                        Background="{x:Null}"
-                                        Foreground="#FFE3E3E3"
-                                        FontFamily="Segoe UI Semibold"/>
-
-                        <Label 
-                                        x:Name = "LowerCpsText"
-                                        FontSize="11"
-                                        Content="3.0 LESS CPS"
-                                        HorizontalAlignment="Right"
-                                        Margin="162,40,0,0"
-                                        VerticalAlignment="Top"
-                                        Background="{x:Null}"
-                                        Foreground="#FFE3E3E3"
-                                        FontFamily="Segoe UI Semibold"/>
-                    </Grid>
-
-                    <Grid x:Name="LeftClickerCpsDropGrid"
-                              HorizontalAlignment="Left"
-                              VerticalAlignment="Bottom"
-                              Width="290"
-                              Margin="65, 0, 0, 130">
-
-
-                        <Rectangle 
-                                        x:Name="LeftButtonCpsDropRectangle" 
-                                        HorizontalAlignment="Left" 
-                                        Height="24" 
-                                        Margin="0,0,0,0" 
-                                        VerticalAlignment="Top" 
-                                        Width="75" 
-                                        Fill="#FF9B00"
-                                        ToolTip="LEFT MOUSE BUTTON CLICKER."
-                                        ToolTipService.Placement="Right"/>
-
-                        <Label
-                                        x:Name="LeftCpsDropLabel"
-                                        Content="CPS DROP"
-                                        HorizontalAlignment="Left"
-                                        Margin="7,0,0,0"
-                                        VerticalAlignment="Top"
-                                        Background="{x:Null}"
-                                        Foreground="#FF150909"
-                                        FontFamily="Segoe UI Semibold"/>
-
-                        <Label 
-                                        Content="Amount" 
-                                        FontFamily="Segoe UI Semilight" 
-                                        VerticalAlignment="Top" 
-                                        Margin="0,40,0,0" 
-                                        HorizontalAlignment="Left"/>
-
-                        <Slider 
-                                        x:Name="LeftCpsDropAmountSlider" 
-                                        Margin="0,45,0,0" 
-                                        VerticalAlignment="Top" 
-                                        Maximum="30"
-                                        HorizontalAlignment="Center" 
-                                        Width="100" 
-                                        Value="2.5"
-                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                        Background="#FF1B191B"
-                                        BorderBrush="#FF2F2C2F"
-                                        Foreground="#FF9B00"/>
-
-                        <Label 
-                                        x:Name="CpsDropAmountText"
-                                        Content="2.5 CPS" 
-                                        HorizontalAlignment="Right" 
-                                        Margin="0,40,0,0" 
-                                        VerticalAlignment="Top" 
-                                        Background="{x:Null}" 
-                                        Foreground="#FFE8E8E8" 
-                                        FontFamily="Segoe UI Semibold"/>
-
-                        <Label 
-                                        Content="Probability" 
-                                        HorizontalAlignment="Left" 
-                                        Margin="0,70,0,0" 
-                                        VerticalAlignment="Top" 
-                                        FontFamily="Segoe UI Semilight"/>
-
-                        <Slider 
-                                        x:Name="LeftCpsDropProbabilitySlider"
-                                        HorizontalAlignment="Center" 
-                                        Margin="0,75,0,0" 
-                                        VerticalAlignment="Top"
-                                        Width="100" 
-                                        Minimum="0"
-                                        Maximum="100" 
-                                        Value="22"
-                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                        Background="#FF1B191B"
-                                        BorderBrush="#FF2F2C2F"
-                                        Foreground="#FF9B00"/>
-
-                        <Label 
-                                        x:Name="CpsDropProbabilityText"
-                                        Content="22 %" 
-                                        HorizontalAlignment="Right" 
-                                        Margin="0,70,0,0" 
-                                        VerticalAlignment="Top" 
-                                        Background="{x:Null}" 
-                                        Foreground="#FFE8E8E8" 
-                                        FontFamily="Segoe UI Semibold"/>
-
-
-
-                    </Grid>
-
-
-                    <Grid x:Name="RightJitterGrid" 
-                          HorizontalAlignment="Center" 
-                          VerticalAlignment="Top" 
-                          Width="290"
-                          Margin="70,45,0,0">
-
-                        <Rectangle 
-                                x:Name="LeftButtonJitterRectangle"
-                                HorizontalAlignment="Left" 
-                                Height="24" 
-                                VerticalAlignment="Top" 
-                                Width="53" 
-                                Fill="#FF9B00"
-                                ToolTip="LEFT MOUSE BUTTON CLICKER."
-                                ToolTipService.Placement="Right"/>
-
-                        <Label 
-                                x:Name="LeftJitterLabel"
-                                Content="JITTER" 
-                                HorizontalAlignment="Left" 
-                                Margin="5,0,0,0" 
-                                VerticalAlignment="Top" 
-                                Background="{x:Null}" 
-                                Foreground="#FF150909" 
-                                FontFamily="Segoe UI Semibold" 
-                                FontWeight="Bold"/>
-
-                        <Slider 
-                                x:Name = "LeftJitterXAxis"
-                                HorizontalAlignment="Center" 
-                                Margin="0,45,0,0"
-                                VerticalAlignment="Top" 
-                                Width="76" 
-                                Value="5"
-                                Maximum="30"
-                                Minimum="0" Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                Background="#FF1B191B"
-                                BorderBrush="#FF2F2C2F"
-                                Foreground="#FF9B00"/>
-
-                        <Label 
-                Content="X Axis" 
-                HorizontalAlignment="Left" 
-                Margin="0,40,0,0"
-                VerticalAlignment="Top"
-                Background="{x:Null}" 
-                Foreground="#DDFFFFFF" 
-                FontFamily="Segoe UI"/>
-
-                        <Label 
-                x:Name="XAxisText"
-                Content="5 SHIFT" 
-                HorizontalAlignment="Right" 
-                Margin="0,40,0,0" 
-                VerticalAlignment="Top" 
-                Background="{x:Null}" 
-                Foreground="#FFE8E8E8" 
-                FontFamily="Segoe UI Semibold"/>
-
-                        <Label 
-                Content="Y Axis" 
-                HorizontalAlignment="Left" 
-                Margin="1,70,0,0" 
-                VerticalAlignment="Top" 
-                Background="{x:Null}" 
-                Foreground="#DDFFFFFF" 
-                FontFamily="Segoe UI"/>
-
-                        <Slider 
-                x:Name = "LeftJitterYAxis" 
-                HorizontalAlignment="Center" 
-                Margin="0,75,0,0" 
-                VerticalAlignment="Top" 
-                Width="76" 
-                Value="3"
-                Maximum="30"
-                Minimum="0" Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                Background="#FF1B191B"
-                BorderBrush="#FF2F2C2F"
-                Foreground="#FF9B00"/>
-
-                        <Label 
-                x:Name="YAxisText"
-                Content="3 SHIFT" 
-                HorizontalAlignment="Right" 
-                Margin="0,70,0,0" 
-                VerticalAlignment="Top" 
-                Background="{x:Null}" 
-                Foreground="#FFE8E8E8" 
-                FontFamily="Segoe UI Semibold"/>
-
-                        <CheckBox
-                x:Name="JitterCheckbox"
-                Content="" 
-                HorizontalAlignment="Left" 
-                HorizontalContentAlignment="Center"
-                Margin="70,3,0,0" 
-                VerticalAlignment="Top"/>
-                    </Grid>
-                </Grid>
-            </TabItem>
-
-            <TabItem Header="RIGHT CLICKER" Foreground="{DynamicResource TextBrush}">
-                <Grid>
-
-                    <Grid x:Name="RightClickerMainGrid" 
-                              HorizontalAlignment="Left" 
-                              Height="350" 
-                              Margin="65,45,0,0" 
-                              VerticalAlignment="Top" 
-                              Width="290">
-
-                        <Rectangle 
-                                x:Name="RightButtonRectangle" 
-                                HorizontalAlignment="Left" 
-                                Height="24" 
-                                VerticalAlignment="Top" 
-                                Width="100" 
-                                Fill="#FF9B00"
-                                ToolTip="LEFT MOUSE BUTTON CLICKER."
-                                ToolTipService.Placement="Right"/>
-
-
-                        <Label 
-                                x:Name="RightButtonLabel"
-                                Content = "RIGHT BUTTON"
-                                HorizontalAlignment = "Left"
-                                Margin = "5,0,0,0"
-                                VerticalAlignment = "Top"
-                                Background = "{x:Null}"
-                                FontFamily = "Segoe UI Semibold"
-                                Foreground = "#FF150909"/>
-
-                        <Label
-                                Content="Clicks per second"
-                                HorizontalAlignment="Left"
-                                Margin="0,40,0,0"
-                                VerticalAlignment="Top"
-                                FontFamily="Segoe UI Semilight"/>
-
-                        <Slider
-                                x:Name = "RightCpsSlider"
-                                HorizontalAlignment="Center"
-                                Margin="50,45,0,0"
-                                VerticalAlignment="Top"
-                                Width="120"
-                                Value="10"
-                                Minimum="5"
-                                Maximum="500" 
-                                Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                Background="#FF1B191B"
-                                BorderBrush="#FF2F2C2F"
-                                Foreground="#FF9B00"/>
-
-                        <Label 
-                                x:Name = "RightCpsText"
-                                FontSize="11"
-                                Content="10 CPS"
-                                HorizontalAlignment="Right"
-                                Margin="0,40,0,0"
-                                VerticalAlignment="Top"
-                                Background="{x:Null}"
-                                Foreground="#FFE3E3E3"
-                                FontFamily="Segoe UI Semibold"/>
-
-                        <Button 
-                                x:Name="RightClickerButton"
-                                HorizontalAlignment="Right"
-                                Margin="150,0,0,0"
-                                VerticalAlignment="Top"
-                                Width="76" 
-                                Height="24" 
-                                Content="BIND A KEY" 
-                                FontSize="8" 
-                                Background="#FF9B00" 
-                                BorderBrush="{x:Null}" />
-
-                        <CheckBox
-                                x:Name="RightClickerCheckbox"
-                                HorizontalAlignment="Left" 
-                                Margin="115,3,0,0" 
-                                VerticalAlignment="Top"/>
-                    </Grid>
-
-                    <Grid x:Name="RightClickerBoundsGrid"
-                              HorizontalAlignment="Left"
-                              VerticalAlignment="Center"
-                              Margin="65, 0, 0, 100"
-                              Width="290">
-
-                        <Rectangle 
-                                        x:Name="RightButtonBoundsRectangle" 
-                                        HorizontalAlignment="Left" 
-                                        Height="24" 
-                                        VerticalAlignment="Top" 
-                                        Width="69" 
-                                        Fill="#FF9B00"
-                                        ToolTip="LEFT MOUSE BUTTON CLICKER."
-                                        ToolTipService.Placement="Right"
-                                        Margin="0,0,0,0"/>
-
-                        <Label 
-                                        x:Name="LeftBoundsLabel"
-                                        Content = "BOUNDS"
-                                        HorizontalAlignment = "Left"
-                                        Margin = "6,0,0,0"
-                                        VerticalAlignment = "Top"
-                                        Background = "{x:Null}"
-                                        Foreground = "#FF150909"
-                                        FontFamily = "Segoe UI Semibold"/>
-
-                        <Label
-                                        Content="Lower Bound"
-                                        HorizontalAlignment="Left"
-                                        Margin="0,40,0,0"
-                                        VerticalAlignment="Top"
-                                        FontFamily="Segoe UI Semilight"/>
-
-                        <Slider
-                                        x:Name = "RightLowerCpsSlider"
-                                        HorizontalAlignment="Center"
-                                        Margin="0,45,0,0"
-                                        VerticalAlignment="Top"
-                                        Width="100"
-                                        Minimum="0"
-                                        Maximum="9" 
-                                        Value="3"
-                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                        Background="#FF1B191B"
-                                        BorderBrush="#FF2F2C2F"
-                                        Foreground="#FF9B00"/>
-
-                        <Label 
-                                        x:Name = "RightLowerCpsText"
-                                        FontSize="11"
-                                        Content="3 LESS CPS"
-                                        HorizontalAlignment="Right"
-                                        Margin="0,40,0,0"
-                                        VerticalAlignment="Top"
-                                        Background="{x:Null}"
-                                        Foreground="#FFE3E3E3"
-                                        FontFamily="Segoe UI Semibold"/>
-
-                        <Label
-                                        Content="Upper Bound"
-                                        HorizontalAlignment="Left"
-                                        Margin="0,70,0,0"
-                                        VerticalAlignment="Top"
-                                        FontFamily="Segoe UI Semilight"/>
-
-                        <Slider
-                                        x:Name = "RightUpperCpsSlider"
-                                        HorizontalAlignment="Center"
-                                        Margin="0,75,0,0"
-                                        VerticalAlignment="Top"
-                                        Width="100"
-                                        Maximum="20"
-                                        Minimum="0"
-                                        Value="1.5"
-                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                        Background="#FF1B191B"
-                                        BorderBrush="#FF2F2C2F"
-                                        Foreground="#FF9B00"/>
-
-                        <Label 
-                                        x:Name = "RightUpperCpsText"
-                                        FontSize="11"
-                                        Content="1.5 MORE CPS"
-                                        HorizontalAlignment="Right"
-                                        Margin="0,70,0,0"
-                                        VerticalAlignment="Top"
-                                        Background="{x:Null}"
-                                        Foreground="#FFE3E3E3"
-                                        FontFamily="Segoe UI Semibold"/>
-
-                    </Grid>
-
-                    <Grid x:Name="RightClickerCpsDropGrid"
-                              VerticalAlignment="Bottom"
-                              HorizontalAlignment="Left"
-                              Margin="65,0, 0, 130"
-                              Width="290">
-
-                        <Rectangle 
-                                        x:Name="RightButtonCpsDropRectangle"
-                                        HorizontalAlignment="Left" 
-                                        Height="24" 
-                                        Margin="0,0,0,0" 
-                                        VerticalAlignment="Top" 
-                                        Width="75" 
-                                        Fill="#FF9B00"
-                                        ToolTip="LEFT MOUSE BUTTON CLICKER."
-                                        ToolTipService.Placement="Right"/>
-
-                        <Label
-                                        x:Name="CpsDropLabel"
-                                        Content="CPS DROP"
-                                        HorizontalAlignment="Left"
-                                        Margin="7,0,0,0"
-                                        VerticalAlignment="Top"
-                                        Background="{x:Null}"
-                                        Foreground="#FF150909"
-                                        FontFamily="Segoe UI Semibold"/>
-
-                        <Label 
-                                        Content="Amount" 
-                                        FontFamily="Segoe UI Semilight" 
-                                        VerticalAlignment="Top" 
-                                        Margin="0,40,0,0" 
-                                        HorizontalAlignment="Left"/>
-
-                        <Slider 
-                                        x:Name="RightCpsDropAmountSlider" 
-                                        Margin="0,45,0,0" 
-                                        VerticalAlignment="Top" 
-                                        Maximum="30"
-                                        HorizontalAlignment="Center" 
-                                        Width="100" 
-                                        Value="2.5"
-                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                        Background="#FF1B191B"
-                                        BorderBrush="#FF2F2C2F"
-                                        Foreground="#FF9B00"/>
-
-                        <Label 
-                                        x:Name="RightCpsDropAmountText"
-                                        Content="2.5 CPS" 
-                                        HorizontalAlignment="Right" 
-                                        Margin="0,40,0,0" 
-                                        VerticalAlignment="Top" 
-                                        Background="{x:Null}" 
-                                        Foreground="#FFE8E8E8" 
-                                        FontFamily="Segoe UI Semibold"/>
-
-                        <Label 
-                                        Content="Probability" 
-                                        HorizontalAlignment="Left" 
-                                        Margin="0,70,0,0" 
-                                        VerticalAlignment="Top" 
-                                        FontFamily="Segoe UI Semilight"/>
-
-                        <Slider 
-                                        x:Name="RightCpsDropProbabilitySlider"
-                                        HorizontalAlignment="Center" 
-                                        Margin="0,75,0,0" 
-                                        VerticalAlignment="Top"
-                                        Width="100" 
-                                        Minimum="0"
-                                        Maximum="100" 
-                                        Value="22"
-                                        Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                        Background="#FF1B191B"
-                                        BorderBrush="#FF2F2C2F"
-                                        Foreground="#FF9B00"/>
-
-                        <Label 
-                                        x:Name="RightCpsDropProbabilityText"
-                                        Content="22 %" 
-                                        HorizontalAlignment="Right" 
-                                        Margin="0,70,0,0" 
-                                        VerticalAlignment="Top" 
-                                        Background="{x:Null}" 
-                                        Foreground="#FFE8E8E8" 
-                                        FontFamily="Segoe UI Semibold"/>
-
-
-
-                    </Grid>
-
-
-                    <Grid x:Name="JitterGrid" 
-                          HorizontalAlignment="Center" 
-                          VerticalAlignment="Top" 
-                          Width="290" 
-                          Margin="70,45,0,0">
-
-                        <Rectangle 
-                                x:Name = "RightButtonJitterRectangle"
-                                HorizontalAlignment="Left" 
-                                Height="24" 
-                                VerticalAlignment="Top" 
-                                Width="53" 
-                                Fill="#FF9B00"
-                                ToolTip="LEFT MOUSE BUTTON CLICKER."
-                                ToolTipService.Placement="Right"/>
-
-                        <Label 
-                                x:Name="JitterLabel"
-                                Content="JITTER" 
-                                HorizontalAlignment="Left" 
-                                Margin="5,0,0,0" 
-                                VerticalAlignment="Top" 
-                                Background="{x:Null}" 
-                                Foreground="#FF150909" 
-                                FontFamily="Segoe UI Semibold" 
-                                FontWeight="Bold"/>
-
-                        <Slider 
-                                x:Name = "RightClickerJitterXAxis"
-                                HorizontalAlignment="Center" 
-                                Margin="0,45,0,0"
-                                VerticalAlignment="Top" 
-                                Width="76" 
-                                Maximum="30"
-                                Minimum="0" Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                Background="#FF1B191B"
-                                BorderBrush="#FF2F2C2F"
-                                Foreground="#FF9B00"/>
-
-                        <Label 
-                                Content="X-Axis" 
-                                HorizontalAlignment="Left" 
-                                Margin="0,40,0,0"
-                                VerticalAlignment="Top"
-                                Background="{x:Null}" 
-                                Foreground="#DDFFFFFF" 
-                                FontFamily="Segoe UI"/>
-
-                        <Label 
-                                x:Name="RightXAxisText"
-                                Content="0 SHIFT" 
-                                Width="70"
-                                HorizontalAlignment="Right" 
-                                Margin="0,40,0,0" 
-                                VerticalAlignment="Top" 
-                                Background="{x:Null}" 
-                                Foreground="#FFE8E8E8" 
-                                FontFamily="Segoe UI Semibold"/>
-
-                        <Label 
-                                Content="Y-Axis" 
-                                HorizontalAlignment="Left" 
-                                Margin="0,70,0,0" 
-                                VerticalAlignment="Top" 
-                                Background="{x:Null}" 
-                                Foreground="#DDFFFFFF" 
-                                FontFamily="Segoe UI"/>
-
-                        <Slider 
-                                x:Name = "RightClickerJitterYAxis" 
-                                HorizontalAlignment="Center" 
-                                Margin="0,75,0,0" 
-                                VerticalAlignment="Top" 
-                                Width="76" 
-                                Maximum="30"
-                                Minimum="0" Style="{DynamicResource MahApps.Metro.Styles.FlatSlider}"
-                                Background="#FF1B191B"
-                                BorderBrush="#FF2F2C2F"
-                                Foreground="#FF9B00"/>
-
-                        <Label 
-                                x:Name="RightYAxisText"
-                                Content="0 SHIFT" 
-                                Width="70"
-                                HorizontalAlignment="Right" 
-                                Margin="0,70,0,0" 
-                                VerticalAlignment="Top" 
-                                Background="{x:Null}" 
-                                Foreground="#FFE8E8E8" 
-                                FontFamily="Segoe UI Semibold"/>
-
-                        <CheckBox
-                                x:Name="RightJitterCheckbox"
-                                HorizontalAlignment="Left" 
-                                Margin="70,3,0,0" 
-                                VerticalAlignment="Top"/>
-                    </Grid>
-
-                </Grid>
-
 
             </TabItem>
 

@@ -103,5 +103,10 @@ public class ComponentsEventsUtil
 
         _mainWindow.LeftClickingMethodSoundComboBox.SelectionChanged +=
             _componentsEvents.LeftClickerSoundEvents.LeftClickingMethodSoundComboBox_SelectionChanged;
+        
+        //
+        
+        _mainWindow.CpsDelimiterSlider.ValueChanged += _mainWindow.DisplayValues.DisplayLeftClickerValues.LeftCpsDelimiterValueChanged;
+        _mainWindow.RightCpsDelimiterSlider.ValueChanged += _mainWindow.DisplayValues.DisplayRightClickerValues.RightCpsDelimiterValueChanged;
     }
 }

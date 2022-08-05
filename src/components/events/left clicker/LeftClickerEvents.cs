@@ -8,10 +8,12 @@ namespace Autoclicker.components.events.left_clicker;
 public class LeftClickerEvents
 {
     private ComponentsEvents _componentsEvents;
+    private MainWindow _mainWindow;
 
-    public LeftClickerEvents(ComponentsEvents componentsEvents)
+    public LeftClickerEvents(ComponentsEvents componentsEvents, MainWindow mainWindow)
     {
         _componentsEvents = componentsEvents;
+        _mainWindow = mainWindow;
     }
 
     public void LeftClickerKeyBindButton_KeyDown(object sender, KeyEventArgs e)
@@ -47,6 +49,7 @@ public class LeftClickerEvents
             Priority = ThreadPriority.Highest
         };
         MainWindow.LeftClickerThreadAborted = false;
+
         _componentsEvents.MainWindow.LeftClickerThread.Start();
     }
 

@@ -42,7 +42,8 @@ public static class LeftClickerValues
     {
         double maxLowerCps = cps - 1;
         Clicker.MainWindow.Dispatcher.Invoke(() => Clicker.MainWindow.LeftLowerCpsSlider.Maximum = maxLowerCps);
-        double maxUpperCps = Constants.CpsLimit - cps;
+        double cpsLimit = Clicker.MainWindow.Dispatcher.Invoke(() => Clicker.MainWindow.CpsDelimiterSlider.Value);
+        double maxUpperCps = cpsLimit - cps;
         Clicker.MainWindow.Dispatcher.Invoke(() => Clicker.MainWindow.LeftUpperCpsSlider.Maximum = maxUpperCps);
     }
 
@@ -55,5 +56,14 @@ public static class LeftClickerValues
     {
         Clicker.MainWindow.Dispatcher.Invoke(() =>
             Clicker.MainWindow.LeftCpsDropAmountSlider.Maximum = cps - lowerBound - 1);
+    }
+
+    public static void SetMaxCPS()
+    {
+        Clicker.MainWindow.Dispatcher.Invoke(() =>
+        {
+            double cpsLimit = Clicker.MainWindow.CpsDelimiterSlider.Value;
+            Clicker.MainWindow.LeftCpsSlider.Maximum = cpsLimit;
+        });
     }
 }

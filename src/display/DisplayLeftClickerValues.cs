@@ -81,4 +81,10 @@ public class DisplayLeftClickerValues
     {
         _displayValues.MainWindow.BlockhitDelayText.Content = Math.Round(_displayValues.MainWindow.BlockhitDelaySlider.Value, 2) + " MS";
     }
+    
+    public void LeftCpsDelimiterValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+    {
+        _displayValues.MainWindow.CpsDelimiterText.Content = Math.Round(_displayValues.MainWindow.CpsDelimiterSlider.Value, 2) + " MAX CPS";
+        _displayValues.MainWindow.LeftCpsSlider.Maximum = _displayValues.MainWindow.CpsDelimiterSlider.Value;
+    }
 }

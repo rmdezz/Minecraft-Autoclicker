@@ -115,9 +115,7 @@ public static class MillisecondsUtil
         await Task.Run(() =>
         {
             double lim = oldCpsMs - oldUpperCpsMs;
-            
-            // Random.NextDoubleLinear(0, oldCpsMs - oldUpperCpsMs);
-            double ms = Random.NextDoubleLinear(lim / 2, lim + 1);
+            double ms = Random.NextDoubleLinear(0, lim + 1);
             if (leftClicker) ClickerData.LeftClicker.LessMs = ms;
             else if (rightClicker) ClickerData.RightClicker.LessMs = ms;
         });

@@ -138,7 +138,7 @@ public partial class MainWindow
 		RefillXAxisRandomSlider.Value = 5;
 		RefillYAxisRandomSlider.Value = 5;
 		*/
-		
+
 		LeftClickerPriorityThread.Items.Add("Below Normal");
 		LeftClickerPriorityThread.Items.Add("Above Normal");
 		LeftClickerPriorityThread.Items.Add("Normal");

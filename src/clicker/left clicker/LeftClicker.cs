@@ -27,6 +27,8 @@ public class LeftClicker
             if (Clicker.MainWindow.Dispatcher == null) return;
             
             await LeftClickerUtil.DisableWhenInventoryOpen();
+             
+            LeftClickerValues.SetMaxCPS();
                 
             double cps = LeftClickerValues.GetLeftClickerCps();
             LeftClickerValues.SetMaxBoundValues(cps);

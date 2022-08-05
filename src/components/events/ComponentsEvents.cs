@@ -18,7 +18,7 @@ public class ComponentsEvents
         MainWindow = mainWindow;
         RightClickerSoundEvents = new RightClickerSoundEvents(this, mainWindow);
         LeftClickerSoundEvents = new LeftClickerSoundEvents(this);
-        _leftClickerEvents = new LeftClickerEvents(this);
+        _leftClickerEvents = new LeftClickerEvents(this, mainWindow);
         _rightClickerEvents = new RightClickerEvents(this);
         _rainbowColorEvents = new RainbowColorEvents(this);
         _componentsEventsUtil = new ComponentsEventsUtil(MainWindow, this);

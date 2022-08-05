@@ -106,6 +106,8 @@ public class ColorPickerUtil
             _colorPicker.MainWindow.LeftSoundPickerLabel.Foreground = foregroundColor;
             _colorPicker.MainWindow.MinecraftStatusLabel.Foreground = foregroundColor;
             _colorPicker.MainWindow.MouseStatusLabel.Foreground = foregroundColor;
+            _colorPicker.MainWindow.CpsDelimiterLabel.Foreground = foregroundColor;
+            _colorPicker.MainWindow.RightCpsDelimiterLabel.Foreground = foregroundColor;
             
         });
     }
