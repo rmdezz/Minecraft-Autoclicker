@@ -27,9 +27,7 @@ public class LeftClicker
             if (Clicker.MainWindow.Dispatcher == null) return;
             
             await LeftClickerUtil.DisableWhenInventoryOpen();
-             
-            LeftClickerValues.SetMaxCPS();
-                
+            
             double cps = LeftClickerValues.GetLeftClickerCps();
             LeftClickerValues.SetMaxBoundValues(cps);
             
@@ -51,11 +49,12 @@ public class LeftClicker
 
             if (canStart)
             {
-                WinApi.TimeBeginPeriod(1); // Set Sleep resolution to 1ms
+                //WinApi.TimeBeginPeriod(1); // Set Sleep resolution to 1ms
                 uint currentRes = 0;
-                WinApi.NtSetTimerResolution(5000, true, ref currentRes); // It sets the timer resolution to 0.5ms when combined with TimeBeginPeriod.
+                WinApi.NtSetTimerResolution(5000, true, ref currentRes); // Sets the timer resolution to 0.5ms.
                 await LeftClickerUtil.MakeLeftClicks(cps, lowerBound);
-                WinApi.TimeEndPeriod(1); // Clears previously set minimum timer resolution.
+                //WinApi.TimeEndPeriod(1); // Clears previously set minimum timer resolution.
+                WinApi.NtSetTimerResolution(5000, false, ref currentRes); // Clears previously set minimum timer resolution.
             }
             else
             {

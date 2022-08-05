@@ -43,8 +43,8 @@ public static class RightClickerValues
     {
         double maxLowerCps = cps - 1;
         Clicker.MainWindow.Dispatcher.Invoke(() => Clicker.MainWindow.RightLowerCpsSlider.Maximum = maxLowerCps);
-            
-        double maxUpperCps = Constants.CpsLimit - cps;
+        double cpsLimit = Clicker.MainWindow.Dispatcher.Invoke(() => Clicker.MainWindow.RightCpsDelimiterSlider.Value);    
+        double maxUpperCps = cpsLimit - cps;
         Clicker.MainWindow.Dispatcher.Invoke(() => Clicker.MainWindow.RightUpperCpsSlider.Maximum = maxUpperCps);
     }
 
