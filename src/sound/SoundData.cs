@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Media;
 using System.Threading;
 using System.Threading.Tasks;
 using Autoclicker.clicker;
@@ -9,6 +10,7 @@ namespace Autoclicker.sound;
 
 public class SoundData
 {
+    private readonly MouseControl _mouseControl;
     private readonly ShuffleSounds _shuffleSounds;
     public Thread MakeSoundsThread;
         
@@ -48,6 +50,7 @@ public class SoundData
     private readonly int[] _butterflyClickSoundsLength = new int[NumberButterflyClickSounds];
     public SoundData(MouseControl mouseControl)
     {
+        _mouseControl = mouseControl;
         _shuffleSounds = new ShuffleSounds(mouseControl, this);
         LoadSoundsFromResources();
     }
@@ -241,6 +244,16 @@ public class SoundData
                 });
             }
         }
+        else if (!isSoundEnabled)
+        {
+            /*
+             * Starting with Windows 11, if a window-owning process becomes fully occluded,
+             * minimized, or otherwise invisible or inaudible to the end user, Windows does
+             * not guarantee a higher resolution than the default system resolution.
+             */
+             
+            PlaySilenceSound();
+        }
     }
 
     public async Task RightClickSounds(bool isRightClickerEnabled)
@@ -289,6 +302,21 @@ public class SoundData
                 });
             }
         }
+        else if (!isSoundEnabled)
+        {
+            /*
+             * Starting with Windows 11, if a window-owning process becomes fully occluded,
+             * minimized, or otherwise invisible or inaudible to the end user, Windows does
+             * not guarantee a higher resolution than the default system resolution.
+             */
+            PlaySilenceSound();
+        }
+    }
+
+    private void PlaySilenceSound()
+    {
+        _mouseControl.SoundPlayer = new SoundPlayer(Properties.Resources.silence_sound); // sound length: 0.010s
+        _mouseControl.SoundPlayer.Play();
     }
 
 }

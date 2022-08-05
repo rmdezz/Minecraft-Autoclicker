@@ -11,6 +11,8 @@ public class LeftClicker
     {
         _clicker = clicker;
     }
+    
+    
 
     public async void left_clicker()
     {
@@ -26,13 +28,10 @@ public class LeftClicker
             
             await LeftClickerUtil.DisableWhenInventoryOpen();
                 
-            /* Set max value of bounds slider */
             double cps = LeftClickerValues.GetLeftClickerCps();
             LeftClickerValues.SetMaxBoundValues(cps);
-
-            double lowerBound = LeftClickerValues.GetLeftClickerLowerBound();
-            double upperBound = LeftClickerValues.GetLeftClickerUpperBound();
             
+            double lowerBound = LeftClickerValues.GetLeftClickerLowerBound();
             LeftClickerValues.SetCpsDropMaxValue(cps, lowerBound);
                 
             string caption = ClickerUtil.GetCaption();
@@ -47,8 +46,15 @@ public class LeftClicker
             if (!onlyInMinecraft) isMinecraftFocused = true;
                 
             bool canStart = _clicker.LeftDown && isClickerEnabled && isMinecraftFocused;
-                
-            if (canStart) await LeftClickerUtil.MakeLeftClicks(cps, lowerBound, upperBound);
+
+            if (canStart)
+            {
+                WinApi.TimeBeginPeriod(1); // Set Sleep resolution to 1ms
+                uint currentRes = 0;
+                WinApi.NtSetTimerResolution(5000, true, ref currentRes); // It sets the timer resolution to 0.5ms when combined with TimeBeginPeriod.
+                await LeftClickerUtil.MakeLeftClicks(cps, lowerBound);
+                WinApi.TimeEndPeriod(1); // Clears previously set minimum timer resolution.
+            }
             else
             {
                 Clicker.MainWindow.FirstLeftClick = true;

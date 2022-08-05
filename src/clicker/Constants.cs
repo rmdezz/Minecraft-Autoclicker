@@ -17,7 +17,7 @@ public class Constants
     }
         
     public const double Tolerance = 0.0000001;
-    public const int CpsLimit = 30;
+    public const int CpsLimit = 500;
     public const int HalfSecond = 500; // ms
     public const int Second = 1000; //ms
 

@@ -37,8 +37,15 @@ public class RightClicker
             RightClickerValues.SetCpsDropMaxValue(cps, lowerBound);
 
             bool canStart = _clicker.RightDown && Clicker.MainWindow.IsRightClickerEnabled && isMinecraftFocused;
-                
-            if (canStart) await RightClickerUtil.MakeRightClicks(cps, lowerBound);
+
+            if (canStart)
+            {
+                WinApi.TimeBeginPeriod(1); // Set Sleep resolution to 1ms
+                uint currentRes = 0;
+                WinApi.NtSetTimerResolution(5000, true, ref currentRes); // It sets the timer resolution to 0.5ms when combined with TimeBeginPeriod.
+                await RightClickerUtil.MakeRightClicks(cps, lowerBound);
+                WinApi.TimeEndPeriod(1); // Clears previously set minimum timer resolution.
+            }
             else
             {
                 Clicker.MainWindow.FirstRightClick = true;

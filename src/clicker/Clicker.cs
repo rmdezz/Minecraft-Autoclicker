@@ -1,9 +1,36 @@
-﻿using Autoclicker.clicker.left_clicker;
+﻿using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Messaging;
+using System.Security;
+using Autoclicker.clicker.left_clicker;
 using Autoclicker.clicker.right_clicker;
 using Autoclicker.hooks;
 using Autoclicker.mouse_control;
 
 namespace Autoclicker.clicker;
+
+
+public static class WinApi
+{
+    /// <summary>TimeBeginPeriod(). See the Windows API documentation for details.</summary>
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Interoperability", "CA1401:PInvokesShouldNotBeVisible"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2118:ReviewSuppressUnmanagedCodeSecurityUsage"), SuppressUnmanagedCodeSecurity]
+    [DllImport("winmm.dll", EntryPoint="timeBeginPeriod", SetLastError=true)]
+
+    public static extern uint TimeBeginPeriod(uint uMilliseconds);
+
+    /// <summary>TimeEndPeriod(). See the Windows API documentation for details.</summary>
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Interoperability", "CA1401:PInvokesShouldNotBeVisible"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2118:ReviewSuppressUnmanagedCodeSecurityUsage"), SuppressUnmanagedCodeSecurity]
+    [DllImport("winmm.dll", EntryPoint="timeEndPeriod", SetLastError=true)]
+
+    public static extern uint TimeEndPeriod(uint uMilliseconds);
+    
+    [DllImport("ntdll.dll", EntryPoint = "NtSetTimerResolution")]
+
+    public static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+}
+
+
 
 public class Clicker
 {

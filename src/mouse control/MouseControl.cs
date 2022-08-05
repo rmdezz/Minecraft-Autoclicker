@@ -22,7 +22,7 @@ public class MouseControl
     public readonly SoundData SoundData;
     private readonly BreakBlocksUtil _breakBlocksUtil;
         
-    public readonly SoundPlayer SoundPlayer = new();
+    public SoundPlayer SoundPlayer = new();
 
     /* Retrieves the position of the mouse cursor, in screen coordinates. */
     [DllImport("user32.dll")]
@@ -54,7 +54,8 @@ public class MouseControl
     public async void LeftMouseDown(Point pointLocator)
     {
         Clicker.LeftDown = true;
-            
+
+
         bool isLeftClickerEnabled = MouseControlUtil.IsLeftClickerEnabled();
         Task task1 = SoundData.LeftClickSounds(isLeftClickerEnabled);
         Task task2 = _jitterUtil.LeftJitterToggle(isLeftClickerEnabled);
@@ -82,8 +83,9 @@ public class MouseControl
         Clicker.RightDown = true;
 
         bool isRightClickerEnabled = _mouseControlUtil.IsRightClickerEnabled();
-        await SoundData.RightClickSounds(isRightClickerEnabled);
-        await _jitterUtil.RightClickerToggle(isRightClickerEnabled);
+        Task task1 = SoundData.RightClickSounds(isRightClickerEnabled);
+        Task task2 =  _jitterUtil.RightClickerToggle(isRightClickerEnabled);
+        await Task.WhenAll(task1, task2);
     }
         
     public void RightMouseUp(Point pointLocator)

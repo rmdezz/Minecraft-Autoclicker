@@ -453,6 +453,15 @@ namespace Autoclicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream silence_sound {
+            get {
+                return ResourceManager.GetStream("silence_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream sixth_butterfly {
             get {
                 return ResourceManager.GetStream("sixth_butterfly", resourceCulture);

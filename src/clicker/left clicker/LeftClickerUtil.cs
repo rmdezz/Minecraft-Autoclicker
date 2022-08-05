@@ -4,25 +4,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Autoclicker.clicker.ms;
 using Autoclicker.hooks;
+using Random = Autoclicker.random_generator.Random;
 
 namespace Autoclicker.clicker.left_clicker;
 
 public static class LeftClickerUtil
 {
-    // async Task
-    public static async Task MakeLeftClicks(double cps, double lowerBound, double upperBound)
+    public static async Task MakeLeftClicks(double cps, double lowerBound)
     {
         // For safety purposes there should be a delay for the first left mouse button click
             if (Clicker.MainWindow.FirstLeftClick)
             {
-                int firstCps = (int) (cps / 3);
-                Thread.Sleep(1000 / firstCps); //5 cps 
+                int ms = Random.NextIntLinear(100, 201);
+                Thread.Sleep(ms);
                 Clicker.MainWindow.FirstLeftClick = false;
             }
             else
             {
                 SetThreadPriority();
                 
+                double upperBound = LeftClickerValues.GetLeftClickerUpperBound();
                 bool newValues = LeftClickerValues.NewValues(cps, lowerBound, upperBound);
                 
                 if (newValues)

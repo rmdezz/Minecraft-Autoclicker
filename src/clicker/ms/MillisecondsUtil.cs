@@ -9,9 +9,15 @@ public static class MillisecondsUtil
     public static async Task SimulateMillisecondsBetweenClicks(double cps, double dropProbability, double cpsMs, double upperCpsMs, double lowerCpsMs, double dropCps, bool leftClicker, bool rightClicker)
     {
         double ms = await GetRandomMilliseconds(cps, dropProbability, cpsMs, upperCpsMs, lowerCpsMs, dropCps, leftClicker, rightClicker);
-        //int resolutionTime = (int) ((ms - (int) ms) * 10) + 7;
-        int resTime = Random.NextIntLinear(1, 16);
-        Thread.Sleep((int)ms - resTime);
+        
+        /*
+         * You can improve the accuracy of Sleep() by using timeBeginPeriod(1),
+         * but it depends on your hardware peripheral's limits on the "one millisecond" delay — is that a minimum,
+         * maximum, or in the middle of a range? - it will still, with a non-zero probability, fail to meet your timing requirement.
+         */
+        
+        int dsv = 1;
+        Thread.Sleep((int)ms - dsv);
     }
 
     private static async Task<double> GetRandomMilliseconds(double cps, double dropProbability, double cpsMs, double upperCpsMs, double lowerCpsMs, double dropCps, bool leftClicker, bool rightClicker)
@@ -108,7 +114,10 @@ public static class MillisecondsUtil
     {
         await Task.Run(() =>
         {
-            double ms = Random.NextDoubleLinear(0, oldCpsMs - oldUpperCpsMs);
+            double lim = oldCpsMs - oldUpperCpsMs;
+            
+            // Random.NextDoubleLinear(0, oldCpsMs - oldUpperCpsMs);
+            double ms = Random.NextDoubleLinear(lim / 2, lim + 1);
             if (leftClicker) ClickerData.LeftClicker.LessMs = ms;
             else if (rightClicker) ClickerData.RightClicker.LessMs = ms;
         });

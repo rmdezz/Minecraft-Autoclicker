@@ -244,6 +244,9 @@
   <data name="seventh_telly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\seventh_telly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="silence_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silence_sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="sixth_butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sixth_butterfly.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
