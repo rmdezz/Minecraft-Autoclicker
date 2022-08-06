@@ -311,25 +311,24 @@ Modern hardware supports a resolution of 0.5 milliseconds.
 Inside Windows NT High Resolution Timers offers additional information.
 An invocation of NtQueryTimerResolution returns the supported resolutions.
 
-** Code example: **
+**Code example:**
 
 ```
-	public static class WinApi
-	{
-	    [DllImport("ntdll.dll", EntryPoint = "NtSetTimerResolution")]
+public static class WinApi
+{
+	[DllImport("ntdll.dll", EntryPoint = "NtSetTimerResolution")]
+	public static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+}
 	
-	    public static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
-	}
-	
-	public void foo()
-	{
-		uint currentRes = 0;
-           WinApi.NtSetTimerResolution(5000, true, ref currentRes); // Sets the timer resolution to 0.5ms.
+public void foo()
+{
+	uint currentRes = 0;
+	WinApi.NtSetTimerResolution(5000, true, ref currentRes); // Sets the timer resolution to 0.5ms.
            
-           // your code
-           
-           WinApi.NtSetTimerResolution(5000, false, ref currentRes); // Clears previously set minimum timer resolution.
-	}
+     // your code
+     
+	WinApi.NtSetTimerResolution(5000, false, ref currentRes); // Clears previously set minimum timer resolution.
+}
 ```
 
 Using the boolean value SetResolution, the functionality of NtSetTImerResolution is mapped to the functions timeBeginPeriod
