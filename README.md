@@ -219,64 +219,153 @@ For this reason, I did the following:
    from influencing the performance of other threads, and threads are terminated
    when checkboxes are unchecked after being checked.
 ```
-## Thread Sleep Latency Problem
+## Window's Timer Resolution and Thread Sleep Problem
 
 Giving up CPU and then getting it back is _expensive_. 
 According to [this article](http://www.tldp.org/HOWTO/IO-Port-Programming-4.html),
 scheduler latency could be anywhere between 10-30ms on Linux. So if you need
 to sleep less than 10ms with high precision then you need to use special
-OS specific APIs. The usual C# Thread.Sleep() is not high resolution sleep. 
+OS specific APIs. The usual Thread sleep is not high resolution sleep. 
 
-According to Mark Gearing's answer in StackOverflow, the delay is consistent,
-exactly 15.625 ms because it looks like Windows timers have a granularity
-of 1/64th of a second. If you need better than that then I feel your pain,
-but that's the framework you have to fit within.
-(Windows isn't a hard real-time OS and doesn't claim to be). 
+The system timer resolution determines how frequently Windows performs two main actions:
 
-And at least in my pc it's the same cause if I try to set 100 cps,
-I always get around 33 cps but other answers and questions on stack overflow
-suggest that it's actually between 1 - 16 ms or 5 - 16 ms.
+Update the timer tick count if a full tick has elapsed.
+Check whether a scheduled timer object has expired.
+A timer tick is a notion of elapsed time that Windows uses to track the time of day and
+thread quantum times. By default, the clock interrupt and timer tick are the same, but
+Windows or an application can change the clock interrupt period.
 
-If I try to set 100 cps, I always get as max 33 cps,
-but other answers and questions on StackOverflow
-indicate that it's actually between 1 and 16 milliseconds
-or 5 and 16 milliseconds.
+```
+The default timer resolution on Windows is (1000/64) 15.625 milliseconds (ms). 
+Some applications reduce this to 1 ms, which reduces the battery run time on mobile systems by as much as 25 percent.
+Source: https://stackoverflow.com/questions/3744032/why-are-net-timers-limited-to-15-ms-resolution
+```
 
-    Sources:
-    1. https://stackoverflow.com/questions/1303667/how-accurate-is-thread-sleeptimespan
-    2. https://stackoverflow.com/questions/65851208/significant-overhead-for-stdthis-threadsleep-in-msvc-16-8-4
+## Thread Sleep Problem
 
-**Simple Workaround**
+Our primary algorithms (left clicker and right clicker) are dependent on the standard timer resolution because it influences the timers and threads.
+To achieve 500 cps, for instance, the delay (ms) between each click must be 1ms.
+Due to the timer's resolution of 15,625 milliseconds, it will not be possible to set this delay to 1 millisecond; instead, 15,625 milliseconds will be assigned.
 
-We can attempt to generate an approximation by subtracting a random number
-between 1 and 15 milliseconds from the milliseconds derived from the main equation.
+Using our principal equation given above:
 
-Pseudocode:
+```
+cps = 500 / ms  
+cps = 500 / 15.625  
+cps = 32 cps  
+```
 
-    Thread.Sleep(ms - random(1, 15) > 0)
+If the standard timer resolution of 15.625 ms is not changed to 1 ms, the maximum cps that can be achieved is 32.
 
-Getting the cps limit
 
-	ms - 15 > 0
+## Timer Resolution from 15.625 ms to 0.5 - 1 ms Workarounds
+
+The timer resolution is determined by the heartbeat of the system. This is typically set to 64 beats per second, or 15,625 milliseconds.
+On newer platforms, it is possible to modify these system-wide settings to achieve timer resolutions of 1 ms or even 0.5 ms:
+
+1. Using the multimedia timer interface for a 1 millisecond resolution:
+
+The multimedia timer interface can provide resolutions as low as 1 millisecond. 
+For more information on timeBeginPeriod, see About Multimedia Timers (MSDN), Obtaining and Setting Timer Resolution (MSDN), and this answer.
+Note: When finished, don't forget to call timeEndPeriod to return to the default timer resolution.
+
+** Code example: **
+```
+	public static class WinApi
+	{
+	    /// <summary>TimeBeginPeriod(). See the Windows API documentation for details.</summary>
 	
-	(500 / cps) - 15 > 0
+	    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Interoperability", "CA1401:PInvokesShouldNotBeVisible"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2118:ReviewSuppressUnmanagedCodeSecurityUsage"), SuppressUnmanagedCodeSecurity]
+	    [DllImport("winmm.dll", EntryPoint="timeBeginPeriod", SetLastError=true)]
 	
-	The critical point is: 
+	    public static extern uint TimeBeginPeriod(uint uMilliseconds);
 	
-	500 / cps - 15 = 0
-	500 / cps = 15
-	cps = 33.33
+	    /// <summary>TimeEndPeriod(). See the Windows API documentation for details.</summary>
+	
+	    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Interoperability", "CA1401:PInvokesShouldNotBeVisible"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2118:ReviewSuppressUnmanagedCodeSecurityUsage"), SuppressUnmanagedCodeSecurity]
+	    [DllImport("winmm.dll", EntryPoint="timeEndPeriod", SetLastError=true)]
+	
+	    public static extern uint TimeEndPeriod(uint uMilliseconds);
+	    
+	}
+	
+	public void foo()
+	{
+		WinApi.TimeBeginPeriod(1); // Set Sleep resolution to 1ms
+		
+		//
+		// your code
+		//
+		
+		WinApi.TimeEndPeriod(1); // Clears previously set minimum timer resolution.
+	}
+```		
+
+2. Going to 0.5 ms resolution:
+
+Using the hidden API NtSetTimerResolution, you can achieve a resolution of 0.5 ms.
+NtSetTimerResolution is exported by NTDLL.DLL, the native Windows NT library.
+How to set the timer resolution to 0.5ms can be found on MSDN. However, the actual
+achievable resolution depends on the underlying hardware.
+Modern hardware supports a resolution of 0.5 milliseconds.
+Inside Windows NT High Resolution Timers offers additional information.
+An invocation of NtQueryTimerResolution returns the supported resolutions.
+
+** Code example: **
+
+```
+	public static class WinApi
+	{
+	    [DllImport("ntdll.dll", EntryPoint = "NtSetTimerResolution")]
+	
+	    public static extern void NtSetTimerResolution(uint DesiredResolution, bool SetResolution, ref uint CurrentResolution);
+	}
+	
+	public void foo()
+	{
+		uint currentRes = 0;
+           WinApi.NtSetTimerResolution(5000, true, ref currentRes); // Sets the timer resolution to 0.5ms.
+           
+           // your code
+           
+           WinApi.NtSetTimerResolution(5000, false, ref currentRes); // Clears previously set minimum timer resolution.
+	}
+```
+
+Using the boolean value SetResolution, the functionality of NtSetTImerResolution is mapped to the functions timeBeginPeriod
+and timeEndPeriod (see Inside Windows NT High Resolution Timers for more details about the scheme and all its implications).
+The multimedia suite limits the resolution to milliseconds, whereas NtSetTimerResolution permits sub-millisecond settings.
+
+```
+Source: https://stackoverflow.com/questions/3744032/why-are-net-timers-limited-to-15-ms-resolution
+```
 
 
-So, actually the limit can be up to 31 cps, since (500 / 31 cps = 16 ms)
+## Timer Resolution and Windows 11 Problem
 
-Therefore, any cps value less than or equal to 31 cps should be safe as this ensures that our application will not crash as a result of passing a negative integer value to the Thread. Sleep() method, as we subtract a random value between 1 and 15 milliseconds from the ms delay due to latency to obtain a somewhat accurate delay (ms).
+Beginning with Windows 11, if a window-owning process is fully obscured,
+minimized, or otherwise invisible or inaudible to the end user, Windows does not guarantee
+a higher resolution than the system's default resolution.
 
-Thread.Sleep is not intended to be used for precision waking. Really, windows architecture itself is not intended for this kind of thing since it's not a real-time OS. 
+## Timer Resolution and Windows 11 Workaround
 
-Our main algorithms, left clicker and right clicker, depends on Thread sleep.
+If the user does not require the application window to be
+in the foreground while using the application, as in this case where the 
+foreground window will be the Minecraft window and the application window will 
+be in the background, we can play a silence sound in a separate thread inside 
+a while loop for as long as the application is running  or when one of the mouse
+buttons is pressed to negate one of the conditions that prevent the modified timer resolution.
 
+This can be implemented as follows:
 
+```
+{
+    System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.silence_sound);
+    player.Play();
+}
+```
+
+The sound of silence can be generated using Audacity.
 
 ## License
 
