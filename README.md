@@ -359,10 +359,13 @@ buttons is pressed to negate one of the conditions that prevent the modified tim
 This can be implemented as follows:
 
 ```C#
+...
 {
+	
     System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.silence_sound);
     player.Play();
 }
+...
 ```
 
 The sound of silence can be generated using Audacity.
