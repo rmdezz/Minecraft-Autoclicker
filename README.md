@@ -269,8 +269,9 @@ The multimedia timer interface can provide resolutions as low as 1 millisecond.
 For more information on timeBeginPeriod, see About Multimedia Timers (MSDN), Obtaining and Setting Timer Resolution (MSDN), and this answer.
 Note: When finished, don't forget to call timeEndPeriod to return to the default timer resolution.
 
-** Code example: **
-```
+**Code example:**
+
+```C#
 	public static class WinApi
 	{
 	    /// <summary>TimeBeginPeriod(). See the Windows API documentation for details.</summary>
@@ -313,7 +314,7 @@ An invocation of NtQueryTimerResolution returns the supported resolutions.
 
 **Code example:**
 
-```
+```C#
 public static class WinApi
 {
 	[DllImport("ntdll.dll", EntryPoint = "NtSetTimerResolution")]
@@ -357,7 +358,7 @@ buttons is pressed to negate one of the conditions that prevent the modified tim
 
 This can be implemented as follows:
 
-```
+```C#
 {
     System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.silence_sound);
     player.Play();
